@@ -3,7 +3,9 @@ $(document).ready(function(){
         // Optional parameters
         autoplay: 3000,
         loop: true,
-        autoplayDisableOnInteraction: false
+        autoplayDisableOnInteraction: false,
+        effect: 'fade',
+        speed: 2000
     })
 });
 <!-- Smooth scrolling script -->
