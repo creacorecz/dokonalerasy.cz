@@ -95,6 +95,9 @@ Default layout, loads most of the pages
         <reference name="root">
             <block type="page/html" name="slider" as="slider" template="page/html/slider.phtml" />
         </reference>
+        <reference name="root">
+            <block type="page/html" name="service" as="services" template="page/html/services.phtml" />
+        </reference>
     </cms_index_index>
 
      <!-- Custom page layout handles -->
