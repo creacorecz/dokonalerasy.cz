@@ -1,4 +1,17 @@
 @import url(https://fonts.googleapis.com/css?family=Josefin+Sans:400,600,300);
+@font-face {
+    font-family: 'BMWRegular';
+    src: url('../fonts/BMWRg.ttf'), url('../fonts/BMWRg.eot');
+}
+@font-face {
+    font-family: 'BMWBold';
+    src: url('../fonts/BMWRgBd.ttf'), url('../fonts/BMWRgBd.eot');
+}
+@font-face {
+    font-family: 'BMWLight';
+    src: url('../fonts/BMWLt.ttf'), url('../fonts/BMWLt.eot');
+}
+
 html, body {
     position: relative;
     height: 100%;
@@ -214,3 +227,80 @@ a.fa-social:hover, a.fa-social:focus{
 #footer1 a:hover{
     color: #fff;
 }
+
+
+/* BOXY S HOLKAMA */
+.wrapper {
+    margin-top: 2em;
+    margin-bottom: 2em;
+    height:500px;
+    min-height: 500px;
+}
+.girl {
+    text-align: center;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    color: black;
+    /*height: 450px;*/
+    height: 100%;
+    padding: 2%;
+}
+#centerGirl {
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+}
+.girl img {
+    /*max-height: 280px;*/
+    width: 100%;
+    display: block;
+    margin: 1em auto;
+}
+
+.girlPopisek {
+    font-family: "BMWRegular";
+    font-size: 18px;
+    text-transform: uppercase;
+    text-align: left;
+    line-height: 1.4em;
+    margin: 1em 0;
+}
+.girlPopisekBig {
+    font-family: "BMWBold";
+    font-size: 40px;
+}
+#girlPopisekVertical {
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+}
+/* do prdele už se vším kurva to neni možne*/
+.girlTextLeft {
+    display: inline-block;
+    clear: both;
+    text-align: right;
+    width: 30%;
+}
+.girlTextRight span {
+    clear: both;
+    padding: 15px;
+    font-size: 48px;
+}
+.girlMore {
+    clear: both;
+    position: absolute;
+    bottom: 2em;
+    display: inline-block;
+    text-align: center;
+    left:0;
+    right:0;
+    margin-left:auto;
+    margin-right:auto;
+    font-family: "BMWLight";
+    color: #d4af7a;
+    border-bottom: 1px solid #d4af7a;
+    padding-bottom: 2px;
+    width: 5em;
+}
+
