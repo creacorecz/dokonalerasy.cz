@@ -233,17 +233,18 @@ a.fa-social:hover, a.fa-social:focus{
 .wrapper {
     margin-top: 2em;
     margin-bottom: 2em;
-    height:500px;
-    min-height: 500px;
 }
 .girl {
     text-align: center;
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
     color: black;
     /*height: 450px;*/
-    height: 100%;
-    padding: 2%;
+    padding: 25px;
+}
+#leftGirl{
+    padding-left: 0px;
+}
+#rightGirl{
+    padding-right: 0px;
 }
 #centerGirl {
     border-left: 1px solid black;
@@ -253,27 +254,22 @@ a.fa-social:hover, a.fa-social:focus{
     /*max-height: 280px;*/
     width: 100%;
     display: block;
-    margin: 1em auto;
 }
-
+#centerGirl .girlPopisek{
+    line-height: 18px;
+}
 .girlPopisek {
     font-family: "BMWRegular";
-    font-size: 18px;
+    font-size: 22px;
     text-transform: uppercase;
     text-align: left;
-    line-height: 1.4em;
-    margin: 1em 0;
+    line-height: 25px;
+    margin: 20px 0;
+    height: 82px;
 }
 .girlPopisekBig {
     font-family: "BMWBold";
     font-size: 40px;
-}
-#girlPopisekVertical {
-    -webkit-transform: rotate(-90deg);
-    -moz-transform: rotate(-90deg);
-    -ms-transform: rotate(-90deg);
-    -o-transform: rotate(-90deg);
-    transform: rotate(-90deg);
 }
 /* do prdele už se vším kurva to neni možne*/
 .girlTextLeft {
@@ -282,21 +278,8 @@ a.fa-social:hover, a.fa-social:focus{
     text-align: right;
     width: 30%;
 }
-.girlTextRight span {
-    clear: both;
-    padding: 15px;
-    font-size: 48px;
-}
 .girlMore {
-    clear: both;
-    position: absolute;
-    bottom: 2em;
-    display: inline-block;
     text-align: center;
-    left:0;
-    right:0;
-    margin-left:auto;
-    margin-right:auto;
     font-family: "BMWLight";
     color: #d4af7a;
     border-bottom: 1px solid #d4af7a;

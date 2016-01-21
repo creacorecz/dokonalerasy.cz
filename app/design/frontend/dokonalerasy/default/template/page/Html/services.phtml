@@ -1,15 +1,32 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: Karol�na
- * Date: 21/01/2016
- * Time: 13:46
- */
+<div class="col-md-12 wrapper">
+    <div class="row" style="border-top: 1px solid black; border-bottom: 1px solid black;">
+            <div class="girl col-md-4 col-sm-4" id="leftGirl">
+            <img src="<?php echo $this->getSkinUrl('img/leva.jpg'); ?>" alt="">
+            <div class="girlPopisek" style="padding-top: 5px;">
+                Přijďte na <span class="girlPopisekBig">školení</span> od zkušených řasových stylistů
+            </div>
 
-?>
-<div class="wrapper row">
-    test adjfaisd fj
-    <div class="girl" id="leftGirl">l</div>
-    <div class="girl" id="centerGirl">c</div>
-    <div class="girl" id="rightgirl">r</div>
+            <span class="girlMore">více zde</span>
+        </div>
+        <div class="girl col-md-4 col-sm-4" id="centerGirl">
+            <img src="<?php echo $this->getSkinUrl('img/stredni.jpg')?>" alt="">
+            <div class="girlPopisek">
+                Kupte si námi užívané
+                <span class="girlTextLeft">produkty</span>
+                <span style="position: relative; top: 25px; left: 5px">v</span>
+                <span style="font-family: 'BMWBold'; font-size: 48px; position: relative; top: 23px; left: 5px">shopu</span>
+            </div>
+            <span class="girlMore">více zde</span>
+        </div>
+        <div class="girl col-md-4 col-sm-4" id="rightGirl">
+            <img src="<?php echo $this->getSkinUrl('img/prava.jpg')?>" alt="">
+            <div class="girlPopisek" style="padding-top: 15px; position: relative">
+                    <span>Navštivte</span>
+                    <span style="transform: rotate(-90deg); position: absolute; top: 8px; left: 118px">náš</span>
+                    <span style="margin-left: 25px; font-size: 2em; font-weight: bold">salon</span>
+                    <span>vyzkoušejte naši kvalitu</span>
+            </div>
+            <span class="girlMore">více zde</span>
+        </div>
+    </div>
 </div>
