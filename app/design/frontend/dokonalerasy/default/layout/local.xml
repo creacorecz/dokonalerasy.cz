@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+<default>
+    <reference name="head">
+    </reference>
+</default>
+
+    <customer_logged_out>
+        <!-- Removes 'Log In' link - Default position: 60 -->
+        <reference name="top.links">
+
+            <!-- Add custom links. Pretty self-explanatory.
+               Dig into app/code/core/Mage/Page/Block/Template/Links.php for more info -->
+            <action method="addLink" translate="label title">
+                <label>Register</label>
+                <url>customer/account/create</url>  <!-- can use full url also -->
+                <title>Register</title>
+                <prepare>true</prepare> <!-- set true if adding base url param -->
+                <position>200</position>
+            </action>
+
+            <action method="removeLinkByUrl"><url helper="customer/getAccountUrl"/></action>
+            <remove name="checkout_cart_link"/>
+            <remove name="wishlist_link"/>
+
+            <action method="removeLinkByUrl"><url helper="customer/getLogoutUrl"/></action>
+        </reference>
+    </customer_logged_out>
+
+<customer_logged_in>
+    <!-- Removes 'Log Out' link - Default position: 60 -->
+    <reference name="top.links">
+        <action method="removeLinkByUrl"><url helper="customer/getLogintUrl"/></action>
+    </reference>
+</customer_logged_in>
+
+</layout>
