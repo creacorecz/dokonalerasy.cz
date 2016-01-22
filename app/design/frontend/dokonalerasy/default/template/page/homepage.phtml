@@ -1,0 +1,138 @@
+<?php
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magento.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magento.com for more information.
+ *
+ * @category    design
+ * @package     base_default
+ * @copyright   Copyright (c) 2006-2015 X.commerce, Inc. (http://www.magento.com)
+ * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+?>
+<?php
+/**
+ * Template for Mage_Page_Block_Html
+ */
+?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php echo $this->getLang() ?>" lang="<?php echo $this->getLang() ?>">
+<head>
+    <?php echo $this->getChildHtml('head') ?>
+</head>
+<body id="top" <?php echo $this->getBodyClass()?' class="'.$this->getBodyClass().'"':'' ?>>
+<?php echo $this->getChildHtml('header') ?>
+<!-- Slider main container -->
+<div class="swiper-container">
+    <!-- Additional required wrapper -->
+    <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide" style="background-image:url('<?php echo $this->getSkinUrl('img/slide1.jpg'); ?>')"></div>
+        <div class="swiper-slide" style="background-image:url('<?php echo $this->getSkinUrl('img/slide2.jpg'); ?>')"></div>
+        <div class="swiper-slide" style="background-image:url('<?php echo $this->getSkinUrl('img/slide3.jpg'); ?>')"></div>
+        <div class="swiper-slide" style="background-image:url('<?php echo $this->getSkinUrl('img/slide4.jpg'); ?>')"></div>
+    </div>
+</div>
+<div class="container" id="content">
+    <div class="col-md-12 wrapper grid" id="services">
+        <div class="row">
+            <div class="box col-xs-4">
+                <img src="<?php echo $this->getSkinUrl('img/leva.jpg'); ?>" alt="">
+                <div class="caption">
+                    Přijďte na <b>školení</b> od zkušených řasových stylistů
+                </div>
+
+                <a href="#">více zde</a>
+            </div>
+            <div class="box col-xs-4" style="border-left: 1px solid #111; border-right: 1px solid #111;">
+                <img src="<?php echo $this->getSkinUrl('img/stredni.jpg')?>" alt="">
+                <div class="caption" style="line-height: 18px;">
+                    Kupte si námi užívané
+                    <span style="display: inline-block;clear: both;text-align: right;width: 30%;">produkty</span>
+                    <span style="position: relative; top: 25px; left: 5px">v</span>
+                    <b style="font-size: 48px; position: relative; top: 23px; left: 5px">shopu</b>
+                </div>
+                <a href="#">více zde</a>
+            </div>
+            <div class="box col-xs-4">
+                <img src="<?php echo $this->getSkinUrl('img/prava.jpg')?>" alt="">
+                <div class="caption" style="position: relative">
+                    <span>Navštivte</span>
+                    <span style="font-size: 14px; transform: rotate(-90deg); position: absolute; top: 2px; left: 122px">náš</span>
+                    <b style="margin-left: 17px; font-size: 2em;">salon</b>
+                    <span>a vyzkoušejte naši kvalitu</span>
+                </div>
+                <a href="#">více zde</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-12 wrapper" style="text-align: center">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+
+                <h1>Violet lashes</h1>
+                <p>Naučíme Vás tvořit dokonalé řasy! Každé oči vyžadují specifický přístup a výběr odpovídajícího designu.</p>
+                <p>VIOLET Lashes dbá nejen na efekt, ale hlavně na přirozenost, komfort a bezpečnost.</p>
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe src="https://www.youtube.com/embed/cZDKZa0MCjE" height="480" width="853" class="embed-responsive-item"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-12 wrapper grid">
+        <div class="row" style="">
+            <div class="box col-xs-4">
+                <img src="<?php echo $this->getSkinUrl('img/005c_sm.jpg'); ?>" alt="">
+                <div class="caption">
+                    <p>Lepidlo <b>Ultra VOLUME</b></p>
+                    <p>740,00 Kč</p>
+                </div>
+                <a href="#">více zde</a>
+            </div>
+            <div class="box col-xs-4" style="border-left: 1px solid #111; border-right: 1px solid #111;">
+                <img src="<?php echo $this->getSkinUrl('img/800_3169_sm.jpg')?>" alt="">
+                <div class="caption">
+                    <p><b>Řasy Mink</b> v krabičce</p>
+                    <p>390,00 Kč</p>
+                </div>
+                <a href="#">více zde</a>
+            </div>
+            <div class="box col-xs-4">
+                <img src="<?php echo $this->getSkinUrl('img/800_3221_volume_sm.jpg')?>" alt="">
+                <div class="caption">
+                    <p><b>Microbrushes </b>(100 ks)</p>
+                    <p>740,00 Kč</p>
+                </div>
+                <a href="#">více zde</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-12 wrapper" style="text-align: center;">
+        <h1 style=" font-family: 'BMWLight'; text-transform: uppercase">E-shop dokonalerasy.cz</h1>
+        <p>Nakupujte v našem e-shopu</p>
+        <a class="btn btn-primary">e-shop</a>
+    </div>
+</div>
+<div style="margin-bottom: 100px">
+    <script src="//instansive.com/widget/js/instansive.js"></script><iframe src="//instansive.com/widgets/ae5c29690f5955caaf47e9ce9d8a36fb.html" id="instansive_ae5c29690f" name="instansive_ae5c29690f"  scrolling="no" allowtransparency="true" class="instansive-widget" style="width: 100%; border: 0; overflow: hidden;"></iframe>
+</div>
+<?php echo $this->getChildHtml('footer') ?>
+<?php echo $this->getChildHtml('global_cookie_notice') ?>
+<?php echo $this->getChildHtml('before_body_end') ?>
+<?php echo $this->getAbsoluteFooter() ?>
+</body>
+</html>

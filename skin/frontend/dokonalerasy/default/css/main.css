@@ -23,17 +23,20 @@ a{
 a.fa{
     outline: none;
 }
-.container {
+#content{
+    padding: 40px 0px 60px 0px;
+}
+.navbar-default .container {
     width: 100%;
 }
 @media(min-width: 1100px) {
-    .container {
+    .navbar-default .container {
         width: 1100px;
     }
 }
 @media(min-width: 1500px)
 {
-    .container{
+    .navbar-default .container{
         width: 1170px;
     }
 }
@@ -129,6 +132,7 @@ a.fa{
 #footer{
     padding: 40px 0px;
     border-top: 1px solid #111;
+    position: relative;
 }
 #footer .form-control {
     height: 40px;
@@ -143,6 +147,16 @@ a.fa{
 #newsletter{
     max-width: 430px;
     margin: 0 auto;
+}
+#newsletter .caption{
+    background: rgb(255, 255, 255) none repeat scroll 0% 0%;
+    position: absolute;
+    top: -75px;
+    left: -20px;
+    padding: 0px 20px;
+    text-transform: uppercase;
+    font-size: 24px;
+    font-weight: bold;
 }
 #newsletter .btn{
     width: 100%;
@@ -163,7 +177,7 @@ a.fa{
     text-align: center;
     margin-top: 20px;
 }
-@media (min-width: 900px){
+@media (min-width: 768px){
     #social {
         margin: 0px;
     }
@@ -190,7 +204,7 @@ a.fa-social:hover, a.fa-social:focus{
     font-size: 18px;
     margin-top: 20px;
 }
-@media (min-width: 900px){
+@media (min-width: 768px){
     #contact {
         text-align: right;
         margin: 0px;
@@ -216,9 +230,29 @@ a.fa-social:hover, a.fa-social:focus{
     background: #111;
     color: #fff;
     padding: 15px 0px;
+    position: relative;
 }
-#up{
+#footer1 hr{
+    margin: 10px 0px;
+}
+#footer1 .container{
+    position: absolute;
+    top: 14px;
+    left: 0px;
+    right: 0px;
+}
+#footer1 .container span{
+    background: #111;
+    padding: 0px 10px;
+    position: relative;
+}
+#footer1 .container span.left{
+    float: left;
+    left: -10px;
+}
+#footer1 .container span.right{
     float: right;
+    left: 10px;
 }
 #footer1 a{
     text-decoration: none;
@@ -229,61 +263,47 @@ a.fa-social:hover, a.fa-social:focus{
 }
 
 
-/* BOXY S HOLKAMA */
 .wrapper {
     margin-top: 2em;
     margin-bottom: 2em;
 }
-.girl {
+.grid .row{
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+.box {
     text-align: center;
     color: black;
-    /*height: 450px;*/
     padding: 25px;
 }
-#leftGirl{
-    padding-left: 0px;
-}
-#rightGirl{
-    padding-right: 0px;
-}
-#centerGirl {
-    border-left: 1px solid black;
-    border-right: 1px solid black;
-}
-.girl img {
-    /*max-height: 280px;*/
+.box img {
     width: 100%;
     display: block;
 }
-#centerGirl .girlPopisek{
-    line-height: 18px;
-}
-.girlPopisek {
+.box .caption{
+    margin-top: 10px;
     font-family: "BMWRegular";
+    font-size: 26px;
+    line-height: 26px;
+}
+.box .caption b{
+    font-family: "BMWBold";
+    font-weight: 500;
+}
+.box a{
+    text-align: center;
+    font-family: "BMWLight";
+    color: #d4af7a;
+}
+#services .caption{
+    font-family: 'BMWRegular';
     font-size: 22px;
     text-transform: uppercase;
     text-align: left;
     line-height: 25px;
-    margin: 20px 0;
-    height: 82px;
+    margin: 20px 0px;
+    min-height: 81px
 }
-.girlPopisekBig {
-    font-family: "BMWBold";
+#services b{
     font-size: 40px;
 }
-/* do prdele už se vším kurva to neni možne*/
-.girlTextLeft {
-    display: inline-block;
-    clear: both;
-    text-align: right;
-    width: 30%;
-}
-.girlMore {
-    text-align: center;
-    font-family: "BMWLight";
-    color: #d4af7a;
-    border-bottom: 1px solid #d4af7a;
-    padding-bottom: 2px;
-    width: 5em;
-}
-

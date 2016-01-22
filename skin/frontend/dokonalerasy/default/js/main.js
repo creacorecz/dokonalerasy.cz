@@ -33,6 +33,6 @@ function menu() {
         $("#secondary").fadeIn();
     }
     else {
-        $("#secondary").fadeOut(30);
+        $("#secondary").fadeOut(20);
     }
 }
