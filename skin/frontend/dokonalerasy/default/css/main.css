@@ -17,12 +17,17 @@ html, body {
     height: 100%;
     font-family: 'Josefin Sans', sans-serif;
 }
+* {
+    /*font-family: "BMWLight";*/
+    color: black;
+}
 a{
     outline: none;
 }
 a.fa{
     outline: none;
 }
+
 #content{
     padding: 40px 0px 60px 0px;
 }
@@ -129,6 +134,24 @@ a.fa{
     background-position: center top;
     background-size: cover;
 }
+.mouse {
+    z-index: 5000;
+    display: block;
+    position: absolute;
+    bottom:120px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+.mouse img {
+    display: block;
+    position: relative;
+    margin: 0 auto;
+    width: 50px;
+    cursor: pointer;
+}
+
+
 #footer{
     padding: 40px 0px;
     border-top: 1px solid #111;
@@ -283,7 +306,7 @@ a.fa-social:hover, a.fa-social:focus{
 .box .caption{
     margin-top: 10px;
     font-family: "BMWRegular";
-    font-size: 26px;
+    font-size: 24px;
     line-height: 26px;
 }
 .box .caption b{
@@ -294,6 +317,7 @@ a.fa-social:hover, a.fa-social:focus{
     text-align: center;
     font-family: "BMWLight";
     color: #d4af7a;
+    font-size: 18px;
 }
 #services .caption{
     font-family: 'BMWRegular';
@@ -306,4 +330,18 @@ a.fa-social:hover, a.fa-social:focus{
 }
 #services b{
     font-size: 40px;
+}
+#aboutLashesHome {
+    font-family: "BMWLight";
+}
+#aboutLashesHome h1 {
+    font-family: "BMWRegular";
+    font-size: 40px;
+    text-transform: uppercase;
+    color: #d3ae79;
+}
+#aboutLashesHome p {
+    font-family: "BMWRegular";
+    font-size: 18px;
+    line-height: 1.1em;
 }
