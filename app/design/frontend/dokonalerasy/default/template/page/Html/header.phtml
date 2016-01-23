@@ -9,7 +9,7 @@
                 <span class="icon-bar"></span>
             </button>
         <?php if ($this->getIsHomePage()):?>
-        <div class="navbar-brand"><img src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>" /></div>
+            <a href="#top" title="<?php echo $this->getLogoAlt() ?>" class="navbar-brand"><img src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>" /></a>
         <?php else:?>
             <a href="<?php echo $this->getUrl('') ?>" title="<?php echo $this->getLogoAlt() ?>" class="navbar-brand"><img src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>" /></a>
         <?php endif?>
@@ -33,7 +33,7 @@
                 <span class="icon-bar"></span>
             </button>
             <?php if ($this->getIsHomePage()):?>
-                <div class="navbar-brand"><img src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>" /></div>
+                <a href="#top" title="<?php echo $this->getLogoAlt() ?>" class="navbar-brand"><img src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>" /></a>
             <?php else:?>
                 <a href="<?php echo $this->getUrl('') ?>" title="<?php echo $this->getLogoAlt() ?>" class="navbar-brand"><img src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>" /></a>
             <?php endif?>
