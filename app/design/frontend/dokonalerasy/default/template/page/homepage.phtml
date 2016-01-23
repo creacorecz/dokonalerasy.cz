@@ -50,7 +50,7 @@
     </div>
 </div>
 <div class="container">
-    <div class="col-md-12 wrapper grid" id="services">
+    <div class="col-md-12 wrapper grid col-sm-10 col-md-offset-0 col-sm-offset-1" id="services">
         <div class="row">
             <div class="box col-sm-4">
                 <img src="<?php echo $this->getSkinUrl('img/leva.jpg'); ?>" alt="">
@@ -89,13 +89,16 @@
                 <h1>Violet lashes</h1>
                 <p>Naučíme Vás tvořit dokonalé řasy! Každé oči vyžadují specifický přístup a výběr odpovídajícího designu.</p>
                 <p style="margin-bottom: 2em;">VIOLET Lashes dbá nejen na efekt, ale hlavně na přirozenost, komfort a bezpečnost.</p>
-                <div class="embed-responsive embed-responsive-16by9">
-                    <iframe src="https://www.youtube.com/embed/cZDKZa0MCjE" height="360" width="640" class="embed-responsive-item"></iframe>
-                </div>
+                <!--<div class="embed-responsive embed-responsive-16by9">-->
+                    <!--<iframe src="https://www.youtube.com/embed/cZDKZa0MCjE" height="360" width="640" class="embed-responsive-item"></iframe>-->
+                    <video width="640" height="360" controls autoplay muted >
+                        <source src="<?php echo $this->getSkinUrl('files/violetvideo.mp4'); ?>" type="video/mp4">
+                    </video>
+                <!-- </div>-->
             </div>
         </div>
     </div>
-    <div class="col-md-12 wrapper grid">
+    <div class="col-md-12 wrapper grid col-sm-10 col-md-offset-0 col-sm-offset-1">
         <div class="row" style="">
             <div class="box col-sm-4" style="padding:40px">
                 <img src="<?php echo $this->getSkinUrl('img/005c_sm.jpg'); ?>" alt="">
@@ -133,6 +136,7 @@
 </div>
     </div>
 <div class="wrapper" style="margin-bottom: 100px">
+    <h4 style="font-family: 'BMWLight'; padding: 5px;margin-left:3px;">Instagram stream</h4>
     <script src="//instansive.com/widget/js/instansive.js"></script><iframe src="//instansive.com/widgets/ae5c29690f5955caaf47e9ce9d8a36fb.html" id="instansive_ae5c29690f" name="instansive_ae5c29690f"  scrolling="no" allowtransparency="true" class="instansive-widget" style="width: 100%; border: 0; overflow: hidden;"></iframe>
 </div>
 <?php echo $this->getChildHtml('footer') ?>
