@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Josefin+Sans:400,600,300);
+@import url(https://fonts.googleapis.com/css?family=Josefin+Sans:400,300,600&subset=latin,latin-ext);
 @font-face {
     font-family: 'BMWRegular';
     src: url('../fonts/BMWRg.ttf'), url('../fonts/BMWRg.eot');
