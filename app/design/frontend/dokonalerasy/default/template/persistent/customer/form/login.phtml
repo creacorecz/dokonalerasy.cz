@@ -37,13 +37,14 @@
         <h1><?php echo $this->__('Login') ?></h1>
         <hr>
     </div>
+
     <?php echo $this->getMessagesBlock()->toHtml() ?>
-    <form action="<?php echo $this->getPostActionUrl() ?>" method="post" id="login-form">
-        <?php echo $this->getBlockHtml('formkey'); ?>
+
         <div class="col-md-6">
-            <div class="row">
-                    <h2><?php echo $this->__('Registered Customers') ?></h2>
-                    <p><?php echo $this->__('If you have an account with us, please log in.') ?></p>
+            <h2><?php echo $this->__('Registered Customers') ?></h2>
+            <p><?php echo $this->__('If you have an account with us, please log in.') ?></p>
+                <form action="<?php echo $this->getPostActionUrl() ?>" method="post" id="login-form">
+                    <?php echo $this->getBlockHtml('formkey'); ?>
 
                             <div class="form-group">
                                 <label for="email" class="required"><em>*</em><?php echo $this->__('Email Address') ?></label>
@@ -66,9 +67,9 @@
                 <a href="<?php echo $this->getForgotPasswordUrl() ?>" class="f-left"><?php echo $this->__('Forgot Your Password?') ?></a>
             </div>
         </div>
-        </div>
         <div class="col-md-6">
             <h2><?php echo $this->__('New Customers') ?></h2>
+
         </div>
         <?php if (Mage::helper('checkout')->isContextCheckout()): ?>
             <input name="context" type="hidden" value="checkout" />
