@@ -93,6 +93,7 @@
                     <!--<iframe src="https://www.youtube.com/embed/cZDKZa0MCjE" height="360" width="640" class="embed-responsive-item"></iframe>-->
                     <video width="640" height="360" controls autoplay muted >
                         <source src="<?php echo $this->getSkinUrl('files/violetvideo.mp4'); ?>" type="video/mp4">
+                        <source src="<?php echo $this->getSkinUrl('files/violetvideo.pgg'); ?>" type="video/ogg">
                     </video>
                 <!-- </div>-->
             </div>
@@ -137,7 +138,8 @@
     </div>
 <div class="wrapper" style="margin-bottom: 100px">
     <h4 style="font-family: 'BMWLight'; padding: 5px;margin-left:3px;">Instagram stream</h4>
-    <script src="//instansive.com/widget/js/instansive.js"></script><iframe src="//instansive.com/widgets/ae5c29690f5955caaf47e9ce9d8a36fb.html" id="instansive_ae5c29690f" name="instansive_ae5c29690f"  scrolling="no" allowtransparency="true" class="instansive-widget" style="width: 100%; border: 0; overflow: hidden;"></iframe>
+    <!-- INSTANSIVE WIDGET --><script src="//instansive.com/widget/js/instansive.js"></script><iframe src="//instansive.com/widgets/a860b1e4a1f054889948784631fc93b4.html" id="instansive_a860b1e4a1" name="instansive_a860b1e4a1"  scrolling="no" allowtransparency="true" class="instansive-widget" style="width: 100%; border: 0; overflow: hidden;"></iframe>
+    <!--<script src="//instansive.com/widget/js/instansive.js"></script><iframe src="//instansive.com/widgets/ae5c29690f5955caaf47e9ce9d8a36fb.html" id="instansive_ae5c29690f" name="instansive_ae5c29690f"  scrolling="no" allowtransparency="true" class="instansive-widget" style="width: 100%; border: 0; overflow: hidden;"></iframe>-->
 </div>
 <?php echo $this->getChildHtml('footer') ?>
 <?php echo $this->getChildHtml('global_cookie_notice') ?>
