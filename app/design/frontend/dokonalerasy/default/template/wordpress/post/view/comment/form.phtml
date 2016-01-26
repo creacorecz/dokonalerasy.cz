@@ -1,0 +1,54 @@
+<?php
+/**
+ * @category    Fishpig
+ * @package     Fishpig_Wordpress
+ * @license     http://fishpig.co.uk/license.txt
+ * @author      Ben Tideswell <help@fishpig.co.uk>
+ */
+?>
+<form id="respond" method="post" action="<?php echo $this->getCommentFormAction() ?>">
+	<div class="display-none">
+		<input type="hidden" name="comment_post_ID" value="<?php echo $this->getPostId() ?>"/>
+		<input type="hidden" name="comment_parent" id="comment_parent" value="<?php echo (int)$this->getRequest()->getParam('replytocom', 0) ?>"/>
+	</div>
+		<h2><?php echo $this->__('Leave a Reply') ?></h2>
+		<?php if ($this->customerMustLogin()): ?>	
+			<p><?php echo $this->__('Sorry, you must be logged in to post a comment.') ?></p>
+			<p><button class="button btn-login" type="button" onclick="setLocation('<?php echo $this->getLoginLink() ?>');"><span><span><?php echo $this->__('Login') ?></span></span></button></p>
+		<?php else: ?>
+				<?php if (!$this->isCustomerLoggedIn()): ?>
+							<div class="form-group">
+								<label for="author" class="required"><?php echo $this->__('Name') ?> <em>*</em></label>
+								<input type="text" id="author" name="author" class="form-control required-entry" value=""/>
+							</div>
+							<div class="form-group">
+								<label for="email" class="required"><?php echo $this->__('Email') ?> <em>*</em></label>
+								<input type="text" id="email" name="email" class="form-control required-entry validate-email" value=""/>
+							</div>
+				<?php endif; ?>
+					<div class="form-group">
+						<label for="url"><?php echo $this->__('Website') ?></label>
+						<input type="text" id="url" name="url" class="form-control" value=""/>
+					</div>
+					<div class="form-group">
+						<label for="comment" class="required"><?php echo $this->__('Comment') ?> <em>*</em></label>
+						<textarea id="comment" name="comment" rows="8" cols="45" class="form-control required-entry"></textarea>
+					</div>
+				<?php echo $this->getChildHtml('before_form_end') ?>
+		<?php endif; ?>
+	<?php if (!$this->customerMustLogin()): ?>	
+	<div class="buttons-set">
+		<button type="submit" name="submit"  class="btn btn-primary" value="Post your comment" id="post-the-comment">
+			<?php echo $this->__('Leave a comment') ?>
+		</button>
+		<span class="please-wait" id="respond-please-wait" style="display:none;">
+			<img src="<?php echo $this->getSkinUrl('images/opc-ajax-loader.gif') ?>" alt="<?php echo $this->__('Loading next step...') ?>" title="<?php echo $this->__('Please wait...') ?>" class="v-middle" /> <?php echo $this->__('Please wait...') ?>
+		</span>
+	</div>
+	<script type="text/javascript">
+	//<![CDATA[
+		new fishpig.WP.Comments.Form('respond', '<?php echo $this->getPost()->getPermalink() ?>');
+	//]]>
+	</script>
+	<?php endif; ?>
+</form>

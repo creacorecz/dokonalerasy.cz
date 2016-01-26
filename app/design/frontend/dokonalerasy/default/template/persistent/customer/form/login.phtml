@@ -69,7 +69,8 @@
         </div>
         <div class="col-md-6">
             <h2><?php echo $this->__('New Customers') ?></h2>
-
+            <p><?php echo $this->__('By creating an account with our store, you will be able to move through the checkout process faster, store multiple shipping addresses, view and track your orders in your account and more.') ?></p>
+            <a href="<?php Mage::getBaseUrl(); ?>/customer/account/create" class="btn btn-primary">Registrovat</a>
         </div>
         <?php if (Mage::helper('checkout')->isContextCheckout()): ?>
             <input name="context" type="hidden" value="checkout" />
