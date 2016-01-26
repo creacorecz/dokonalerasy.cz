@@ -25,9 +25,24 @@ $(function () {
 $(window).on('scroll', function(){
     if($(this).width()>=1100){
         menu();
+        video();
     }
 });
-
+function video() {
+    var position = window.pageYOffset;
+    var offset = 1000;
+    var video = $('#promo').offset().top - offset;
+    if(position > video) {
+        $('#promo').get(0).play();
+    }
+    else
+    {
+        if(!$('#promo').get(0).paused)
+        {
+            $('#promo').get(0).pause();
+        }
+    }
+}
 function menu() {
     if ($(window).scrollTop()>30) {
         $("#secondary").fadeIn();

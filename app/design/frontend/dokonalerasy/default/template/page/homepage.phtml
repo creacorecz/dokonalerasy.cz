@@ -89,13 +89,12 @@
                 <h1>Violet lashes</h1>
                 <p>Naučíme Vás tvořit dokonalé řasy! Každé oči vyžadují specifický přístup a výběr odpovídajícího designu.</p>
                 <p style="margin-bottom: 2em;">VIOLET Lashes dbá nejen na efekt, ale hlavně na přirozenost, komfort a bezpečnost.</p>
-                <!--<div class="embed-responsive embed-responsive-16by9">-->
-                    <!--<iframe src="https://www.youtube.com/embed/cZDKZa0MCjE" height="360" width="640" class="embed-responsive-item"></iframe>-->
-                    <video width="640" height="360" controls autoplay muted >
+                <div class="embed-responsive embed-responsive-16by9">
+                    <video id="promo" width="640" height="360" poster="<?php echo $this->getSkinUrl('img/poster.jpg')?>" controls muted class="embed-responsive-item">
                         <source src="<?php echo $this->getSkinUrl('files/violetvideo.mp4'); ?>" type="video/mp4">
-                        <source src="<?php echo $this->getSkinUrl('files/violetvideo.pgg'); ?>" type="video/ogg">
+                        <source src="<?php echo $this->getSkinUrl('files/violetvideo.ogg'); ?>" type="video/ogg">
                     </video>
-                <!-- </div>-->
+                </div>
             </div>
         </div>
     </div>
