@@ -7,6 +7,7 @@
  */
 ?>
 <?php $post = $this->getPost() ?>
+<div class="col-md-10 col-md-offset-1">
 <?php if ($post): ?>
 	<?php $helper = $this->helper('wordpress') ?>
 	<?php $author = $post->getAuthor() ?>
@@ -25,4 +26,5 @@
 		<?php echo $this->getAfterPostContentHtml() ?>
 		<?php echo $this->getCommentsHtml() ?>
 	</div>
+</div>
 <?php endif; ?>
