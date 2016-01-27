@@ -25,9 +25,10 @@
 .post-entry p { margin-bottom: 1em; }
 
 .featured-image {
-	border: 1px solid #ddd;
-	margin: 4px 10px 2px 0;
+	/*border: 1px solid #ddd;*/
+	margin: 4px 10px 15px 0;
 	padding: 1px;
+    text-align: center;
 }
 
 .featured-image.right {
@@ -50,7 +51,19 @@
  */
 .post-list li.item { margin-bottom: 20px; list-style-type: none;}
 .post-list li.item .post-list-item { height: 1%; overflow: hidden; }
-.post-list h2 { line-height: 1em; margin-bottom: 1em; }
+.post-list h2 {
+    line-height: 1em;
+    margin-bottom: 1em;
+}
+.post-list h2 a {
+    color: black;
+    font-family: "BMWLight";
+
+}
+.post-list h2 a:hover {
+    color: #d4af7a;
+    text-decoration: none;
+}
 
 
 /**

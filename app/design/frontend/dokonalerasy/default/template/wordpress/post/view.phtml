@@ -10,8 +10,8 @@
 <?php if ($post): ?>
 	<?php $helper = $this->helper('wordpress') ?>
 	<?php $author = $post->getAuthor() ?>
-	<div class="page-title post-title">
-		<h1><?php // echo $this->escapeHtml($post->getPostTitle()) ?></h1>
+	<div class="page-title post-title show-this-title-please">
+		<h1><?php  echo $this->escapeHtml($post->getPostTitle()) ?></h1>
 	</div>
 	<div class="post-view">
 		<?php echo $this->getBeforePostContentHtml() ?>

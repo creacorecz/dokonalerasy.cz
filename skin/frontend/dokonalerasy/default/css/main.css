@@ -420,6 +420,10 @@ a.list-group-item, button.list-group-item {
 
 
 /* WORDPRESS*/
+
 #content>.page-title {
     display: none;
+}
+.show-this-title-please {
+    display: block!important;
 }
