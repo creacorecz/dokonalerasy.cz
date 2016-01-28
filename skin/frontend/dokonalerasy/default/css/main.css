@@ -189,6 +189,13 @@ a.fa{
     font-size: 14px;
     border-radius: 0px;
 }
+.form-control {
+    height: 40px;
+    margin-bottom: 10px;
+    padding: 10px 15px;
+    font-size: 14px;
+    border-radius: 0px;
+}
 #footer input[type="submit"]{
     float: right;
 }
