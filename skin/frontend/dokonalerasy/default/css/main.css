@@ -331,11 +331,24 @@ a.fa-social:hover, a.fa-social:focus{
     border-top: 1px solid black;
     border-bottom: 1px solid black;
 }
-.grid-shop{
+.grid-shop .box{
+    border-top: none;
+    border-bottom: 1px solid black;
+}
+.grid-shop .row{
+    margin: 0px;
+}
+.grid-shop .row:first-of-type .box{
     border-top: 1px solid black;
 }
-.grid-shop:last-of-type{
-    border-bottom: 1px solid black;
+.grid-shop .box{
+    border-left: 1px solid black;
+}
+.grid-shop .box:first-of-type{
+    border-left: 1px solid black;
+}
+.grid-shop .box:last-of-type{
+    border-right: 1px solid black;
 }
 .box {
     text-align: center;
@@ -357,8 +370,9 @@ a.fa-social:hover, a.fa-social:focus{
 .box .caption{
     margin-top: 10px;
     font-family: "BMWRegular";
-    font-size: 24px;
+    font-size: 22px;
     line-height: 26px;
+    margin-bottom: 10px;
 }
 .box .caption b{
     font-family: "BMWBold";
