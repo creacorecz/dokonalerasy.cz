@@ -434,3 +434,39 @@ a.list-group-item, button.list-group-item {
 .show-this-title-please {
     display: block!important;
 }
+
+/* VIOLET TYM */
+#jsmeVioletH {
+    font-size: 26px;
+    margin: 20px 0;
+}
+#jsmeVioletPopis {
+    font-size: 17px;
+    padding: 0 45px;
+    margin-top: 20px;
+}
+#jsmeVioletHr {
+    background-color: #d4af7a;
+    height:1px;
+}
+#jsemEkaterinaH {
+    font-size: 28px;
+    margin: 20px 0;
+    font-family: "BMWRegular";
+}
+#jsmeEkaterinap {
+    font-size: 17px;
+    vertical-align: bottom;
+}
+.jsmeRadekLidi {
+    margin: 50px 0;
+}
+.jsmeRadekLidi div div img {
+    border-bottom: 2px solid #d4af7a;
+}
+.jsmeRadekLidi div p {
+    text-align: center;
+    padding: 5px;
+    font-family: "BMWLight";
+    font-size: 16px;
+}
