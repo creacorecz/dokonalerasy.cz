@@ -271,7 +271,7 @@ a.fa-social:hover, a.fa-social:focus{
     box-shadow: 0px 1px 1px rgba(211, 174, 121, 0.075) inset, 0px 0px 8px rgba(211, 174, 121, 0.6);
 }
 .btn-primary{
-    padding: 8px 14px;
+    padding: 10px 15px;
     border-radius: 0px;
     border: none;
     background: #111;
@@ -392,7 +392,7 @@ a.fa-social:hover, a.fa-social:focus{
     margin-bottom: 5px;
     height: 50px;
 }
-.box .price-box{
+.price-box{
     font-size: 20px;
 margin-bottom: 10px;
 }
@@ -479,4 +479,11 @@ a.list-group-item, button.list-group-item {
 }
 .show-this-title-please {
     display: block!important;
+}
+.form-inline button{
+    position: relative;
+    top: -5px;
+}
+.form-control.qty{
+    width: 60px;
 }
