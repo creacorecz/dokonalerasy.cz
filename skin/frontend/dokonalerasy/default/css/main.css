@@ -342,6 +342,9 @@ a.fa-social:hover, a.fa-social:focus{
     border-top: 1px solid black;
     border-bottom: 1px solid black;
 }
+.grid-shop{
+    margin: 30px 0px;
+}
 .grid-shop .box{
     border-top: none;
     border-bottom: 1px solid black;
