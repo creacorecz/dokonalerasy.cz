@@ -464,6 +464,7 @@ a.list-group-item, button.list-group-item {
 }
 
 .product-image{
+    padding-top: 20px;
     width: 100%;
 }
 .more-views ul{
