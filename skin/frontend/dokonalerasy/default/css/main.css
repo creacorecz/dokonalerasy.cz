@@ -21,8 +21,12 @@ body {
     font-family: "BMWLight";
     color: #000;
 }
-a, a:active, a:focus{
+a{
+    color: #000;
     outline: none;
+}
+a:active, a:focus, a:hover{
+    color: #d3ae79;
 }
 a.fa{
     outline: none;
