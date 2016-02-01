@@ -47,17 +47,21 @@ $_helper = $this->helper('catalog/output');
             ?>
             <div class="row">
             <?php endif; ?>
-            <div class="box col-sm-3" style="padding:40px">
-                <a href="<?php echo $_product->getProductUrl() ?>" title="<?php echo $this->stripTags($this->getImageLabel($_product, 'small_image'), null, true) ?>" class="product-image"><img src="<?php echo $this->helper('catalog/image')->init($_product, 'small_image')->resize(135); ?>" width="135" height="135" alt="<?php echo $this->stripTags($this->getImageLabel($_product, 'small_image'), null, true) ?>" /></a>
+            <div class="box col-sm-3">
+                <a href="<?php echo $_product->getProductUrl() ?>" title="<?php echo $this->stripTags($this->getImageLabel($_product, 'small_image'), null, true) ?>" class="product-image"><img src="<?php echo $this->helper('catalog/image')->init($_product, 'thumbnail'); ?>" alt="<?php echo $this->stripTags($this->getImageLabel($_product, 'small_image'), null, true) ?>" /></a>
                 <div class="caption">
                 <?php echo $_helper->productAttribute($_product, $_product->getName(), 'name') ?>
-                <?php echo $this->getPriceHtml($_product, true) ?>
+                
                     </div>
             <div class="actions">
                 <?php if($_product->isSaleable()): ?>
+                <p class="text-success">Skladem</p>
+                <?php echo $this->getPriceHtml($_product, true) ?>
                     <button type="button" title="<?php echo Mage::helper('core')->quoteEscape($this->__('Add to Cart')) ?>" class="btn btn-primary" onclick="setLocation('<?php echo $this->getAddToCartUrl($_product) ?>')"><span><span><?php echo $this->__('Add to Cart') ?></span></span></button>
                 <?php else: ?>
-                    <p class="availability out-of-stock"><span><?php echo $this->__('Out of stock') ?></span></p>
+                    <p class="text-danger"><span><?php echo $this->__('Vyprodáno') ?></span></p>
+                    <?php echo $this->getPriceHtml($_product, true) ?>
+                    <button type="button" title="<?php echo Mage::helper('core')->quoteEscape($this->__('Add to Cart')) ?>" disabled class="btn btn-primary" onclick="setLocation('<?php echo $this->getAddToCartUrl($_product) ?>')"><span><span><?php echo $this->__('Add to Cart') ?></span></span></button>
                 <?php endif; ?>
             </div>
                 </div>

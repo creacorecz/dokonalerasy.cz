@@ -270,9 +270,13 @@ a.fa-social:hover, a.fa-social:focus{
     background: #111;
     color: #fff;
 }
-.btn-primary:hover, .btn-primary:focus{
+.btn.disabled, .btn[disabled], fieldset[disabled] .btn{
+    opacity: 0.75;
+}
+.btn-primary:hover, .btn-primary:focus, .btn-primary.focus, .btn-primary:active, .btn-primary.active, .btn-primary:active:hover, .btn-primary.active:hover, .open > .dropdown-toggle.btn-primary:hover, .btn-primary:active:focus, .btn-primary.active:focus, .open > .dropdown-toggle.btn-primary:focus, .btn-primary.focus:active, .btn-primary.active.focus, .open > .dropdown-toggle.btn-primary.focus, .btn-primary.disabled:hover, .btn-primary[disabled]:hover, fieldset[disabled] .btn-primary:hover, .btn-primary.disabled:focus, .btn-primary[disabled]:focus, fieldset[disabled] .btn-primary:focus, .btn-primary.disabled.focus, .btn-primary.focus[disabled], fieldset[disabled] .btn-primary.focus{
     background: #d3ae79;
     border: inherit;
+    outline: none;
 }
 .btn-default{
     padding: 8px 35px;
@@ -281,7 +285,7 @@ a.fa-social:hover, a.fa-social:focus{
     background: #fff;
     color: #d3ae79;
 }
-.btn-default:hover, .btn-default:focus, .btn-default:active, .btn-default.active{
+.btn-default:hover, .btn-default:focus, .btn-default.focus, .btn-default:active, .btn-default.active, .btn-default:active:hover, .btn-default.active:hover, .open > .dropdown-toggle.btn-default:hover, .btn-default:active:focus, .btn-default.active:focus, .open > .dropdown-toggle.btn-default:focus, .btn-default.focus:active, .btn-default.active.focus, .open > .dropdown-toggle.btn-default.focus, .btn-default.disabled:hover, .btn-default[disabled]:hover, fieldset[disabled] .btn-default:hover, .btn-default.disabled:focus, .btn-default[disabled]:focus, fieldset[disabled] .btn-default:focus, .btn-default.disabled.focus, .btn-default.focus[disabled], fieldset[disabled] .btn-default.focus{
     background: #d3ae79;
     color: #fff;
     border: 1px solid #d3ae79;
@@ -337,18 +341,20 @@ a.fa-social:hover, a.fa-social:focus{
 }
 .grid-shop .row{
     margin: 0px;
+    display: flex;
 }
 .grid-shop .row:first-of-type .box{
     border-top: 1px solid black;
 }
 .grid-shop .box{
-    border-left: 1px solid black;
+    border-right: 1px solid black;
+    padding: 30px;
 }
 .grid-shop .box:first-of-type{
-    border-left: 1px solid black;
+    border-left: none;
 }
-.grid-shop .box:last-of-type{
-    border-right: 1px solid black;
+.grid-shop .box:nth-child(4n){
+    border-right: none;
 }
 .box {
     text-align: center;
@@ -365,14 +371,20 @@ a.fa-social:hover, a.fa-social:focus{
 }
 .box img {
     width: 100%;
-    display: block;
+    height: auto;
 }
 .box .caption{
     margin-top: 10px;
     font-family: "BMWRegular";
-    font-size: 22px;
-    line-height: 26px;
-    margin-bottom: 10px;
+    font-size: 18px;
+    line-height: 24px;
+    margin-top: 20px;
+    margin-bottom: 5px;
+    height: 50px;
+}
+.box .price-box{
+    font-size: 20px;
+margin-bottom: 10px;
 }
 .box .caption b{
     font-family: "BMWBold";
