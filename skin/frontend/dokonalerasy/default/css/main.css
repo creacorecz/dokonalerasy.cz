@@ -463,6 +463,14 @@ a.list-group-item, button.list-group-item {
     border-bottom-left-radius: 4px;
 }
 
+.product-image{
+    width: 100%;
+}
+.more-views ul{
+    list-style-type: none;
+    padding-left: 0px;
+    margin: 5px 5px 0px 0px;
+}
 
 /* WORDPRESS*/
 
