@@ -1,0 +1,517 @@
+@import url(https://fonts.googleapis.com/css?family=Josefin+Sans:400,300,600&subset=latin,latin-ext);
+@font-face {
+    font-family: 'BMWRegular';
+    src: url('../fonts/BMWRg.ttf'), url('../fonts/BMWRg.eot');
+}
+@font-face {
+    font-family: 'BMWBold';
+    src: url('../fonts/BMWRgBd.ttf'), url('../fonts/BMWRgBd.eot');
+}
+@font-face {
+    font-family: 'BMWLight';
+    src: url('../fonts/BMWLt.ttf'), url('../fonts/BMWLt.eot');
+}
+
+html, body {
+    position: relative;
+    height: 100%;
+    font-family: 'Josefin Sans', sans-serif;
+}
+body {
+    font-family: "BMWLight";
+    color: #000;
+}
+a{
+    color: #000;
+    outline: none;
+}
+a:active, a:focus, a:hover{
+    color: #d3ae79;
+    outline: none;
+}
+
+#content{
+    padding: 60px 0px 40px 0px;
+}
+@media(min-width: 1100px)
+{
+    #content {
+        padding: 120px 0px 40px 0px;
+        min-height: 700px;
+    }
+}
+.navbar-default .container {
+    width: 100%;
+}
+@media(min-width: 1100px) {
+    .navbar-default .container {
+        width: 1100px;
+    }
+}
+@media(min-width: 1500px)
+{
+    .navbar-default .container{
+        width: 1170px;
+    }
+}
+.navbar-default{
+    font-family: 'Josefin Sans', sans-serif;
+    border: none;
+    -webkit-box-shadow: 0 -2px 10px 0 rgba(0,0,0,1);
+    box-shadow: 0 -2px 10px 0 rgba(0,0,0,1);
+    background-color: #FFF;
+    text-transform: uppercase;
+    margin: 0px;
+    position: fixed;
+    right: 0px;
+    left: 0px;
+}
+.navbar-default .navbar-brand{
+    height: auto;
+    outline: none;
+    padding: 10px 10px 10px 0px;
+}
+.navbar-brand img{
+    height: 50px;
+}
+#topNav{
+    margin: 5px 0px;
+    font-size: 14px;
+}
+.navbar-default .navbar-nav > li > a{
+    outline: none;
+    padding-left: 5px;
+    padding-right: 10px;
+    font-weight: 600;
+    color: #000;
+}
+.navbar-default .container{
+    position: relative;
+}
+@media(min-width: 1100px){
+    #topLinks{
+        position: absolute;
+        right: 0;
+    }
+}
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:focus, .navbar-default .navbar-nav > .active > a:hover {
+    color: #d3ae79;
+    background-color: inherit;
+}
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus{
+    color: #d3ae79;
+}
+.navbar-right{
+    margin-right: 0px;
+}
+.navbar-toggle{
+    margin-top: 13px;
+}
+#topLinks li a {
+    font-size: 10px;
+    padding: 10px 5px;
+}
+.navbar-default .navbar-brand{
+    padding: 5px 5px 5px 0px;
+}
+@media(min-width: 1100px){
+    .navbar-default .navbar-nav > li > a {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    #primary{
+        position: absolute;
+    }
+    #primary.navbar-default .navbar-brand{
+        padding: 10px 10px 10px 0px;
+    }
+    .navbar-default .navbar-brand{
+        width: 233px;
+    }
+    #primary .navbar-brand img{
+        height: 80px;
+    }
+    #primary #topNav {
+        margin: 25px 0px;
+        font-size: 16px;
+    }
+    #primary #topNav {
+        font-size: 16px;
+    }
+}
+#secondary{
+    display: none;
+}
+
+/* SLIDER */
+.swiper-container {
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    padding-top: 60px;
+    margin-bottom: 40px;
+}
+@media(min-width: 1100px)
+{
+    .swiper-container {
+        padding-top: 100px;
+    }
+}
+.swiper-slide {
+    background-position: center top;
+    background-size: cover;
+}
+.mouse {
+    z-index: 1;
+    display: block;
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+.mouse img {
+    display: block;
+    position: relative;
+    margin: 0 auto;
+    width: 50px;
+    cursor: pointer;
+}
+
+
+#footer{
+    padding: 40px 0px;
+    border-top: 1px solid #111;
+    position: relative;
+}
+#footer .form-control {
+    height: 40px;
+    margin-bottom: 10px;
+    padding: 10px 15px;
+    font-size: 14px;
+    border-radius: 0px;
+}
+.form-control {
+    height: 40px;
+    margin-bottom: 10px;
+    padding: 10px 15px;
+    font-size: 14px;
+    border-radius: 0px;
+}
+#footer input[type="submit"]{
+    float: right;
+}
+#newsletter{
+    max-width: 430px;
+    margin: 0 auto;
+}
+#newsletter .caption{
+    background: rgb(255, 255, 255) none repeat scroll 0% 0%;
+    position: absolute;
+    top: -75px;
+    left: -20px;
+    padding: 0px 20px;
+    text-transform: uppercase;
+    font-size: 24px;
+    font-weight: bold;
+}
+#newsletter .btn{
+    width: 100%;
+}
+@media (min-width: 900px){
+    #newsletter .btn{
+        width: auto;
+    }
+    #newsletter{
+        max-width: none;
+    }
+}
+#social .logo{
+    height: 80px;
+    margin-bottom: 20px;
+}
+#social{
+    text-align: center;
+    margin-top: 20px;
+}
+@media (min-width: 768px){
+    #social {
+        margin: 0px;
+    }
+}
+a.fa-social{
+    font-size: 24px;
+    width: 54px;
+    height: 54px;
+    padding: 15px;
+    color: #fff;
+    background: #111;
+    border-radius: 50%;
+    text-decoration: none;
+    margin-right: 15px;
+}
+a.fa-social:last-child{
+    margin-right: 0px;
+}
+a.fa-social:hover, a.fa-social:focus{
+    background: #d3ae79;
+}
+#contact{
+    text-align: center;
+    font-size: 18px;
+    margin-top: 20px;
+}
+@media (min-width: 768px){
+    #contact {
+        text-align: right;
+        margin: 0px;
+    }
+}
+.form-control:focus {
+    border-color: #d3ae79;
+    outline: 0px none;
+    box-shadow: 0px 1px 1px rgba(211, 174, 121, 0.075) inset, 0px 0px 8px rgba(211, 174, 121, 0.6);
+}
+.btn-primary{
+    padding: 10px 15px;
+    border-radius: 0px;
+    border: none;
+    background: #111;
+    color: #fff;
+}
+.btn.disabled, .btn[disabled], fieldset[disabled] .btn{
+    opacity: 0.75;
+}
+.btn-primary:hover, .btn-primary:focus, .btn-primary.focus, .btn-primary:active, .btn-primary.active, .btn-primary:active:hover, .btn-primary.active:hover, .open > .dropdown-toggle.btn-primary:hover, .btn-primary:active:focus, .btn-primary.active:focus, .open > .dropdown-toggle.btn-primary:focus, .btn-primary.focus:active, .btn-primary.active.focus, .open > .dropdown-toggle.btn-primary.focus, .btn-primary.disabled:hover, .btn-primary[disabled]:hover, fieldset[disabled] .btn-primary:hover, .btn-primary.disabled:focus, .btn-primary[disabled]:focus, fieldset[disabled] .btn-primary:focus, .btn-primary.disabled.focus, .btn-primary.focus[disabled], fieldset[disabled] .btn-primary.focus{
+    background: #d3ae79;
+    border: inherit;
+    outline: none;
+}
+.btn-default{
+    padding: 8px 35px;
+    border-radius: 0px;
+    border: 1px solid #d3ae79;
+    background: #fff;
+    color: #d3ae79;
+}
+.btn-default:hover, .btn-default:focus, .btn-default.focus, .btn-default:active, .btn-default.active, .btn-default:active:hover, .btn-default.active:hover, .open > .dropdown-toggle.btn-default:hover, .btn-default:active:focus, .btn-default.active:focus, .open > .dropdown-toggle.btn-default:focus, .btn-default.focus:active, .btn-default.active.focus, .open > .dropdown-toggle.btn-default.focus, .btn-default.disabled:hover, .btn-default[disabled]:hover, fieldset[disabled] .btn-default:hover, .btn-default.disabled:focus, .btn-default[disabled]:focus, fieldset[disabled] .btn-default:focus, .btn-default.disabled.focus, .btn-default.focus[disabled], fieldset[disabled] .btn-default.focus{
+    background: #d3ae79;
+    color: #fff;
+    border: 1px solid #d3ae79;
+}
+#footer1{
+    background: #111;
+    color: #fff;
+    padding: 15px 0px;
+    position: relative;
+}
+#footer1 hr{
+    margin: 10px 0px;
+}
+#footer1 .container{
+    position: absolute;
+    top: 14px;
+    left: 0px;
+    right: 0px;
+}
+#footer1 .container span{
+    background: #111;
+    padding: 0px 10px;
+    position: relative;
+}
+#footer1 .container span.left{
+    float: left;
+    left: -10px;
+}
+#footer1 .container span.right{
+    float: right;
+    left: 10px;
+}
+#footer1 a{
+    text-decoration: none;
+    color: #dedede;
+}
+#footer1 a:hover{
+    color: #fff;
+}
+
+
+.wrapper {
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+.grid .row{
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+.grid-shop{
+    margin: 50px 0px;
+}
+.grid-shop .box{
+    border-top: none;
+    border-bottom: 1px solid black;
+}
+.grid-shop .row{
+    margin: 0px;
+    display: flex;
+}
+.grid-shop .row:first-of-type .box{
+    border-top: 1px solid black;
+}
+.grid-shop .box{
+    border-right: 1px solid black;
+    padding: 30px;
+}
+.grid-shop .box:first-of-type{
+    border-left: none;
+}
+.grid-shop .box:nth-child(4n){
+    border-right: none;
+}
+.box {
+    text-align: center;
+    color: black;
+    padding: 25px;
+}
+@media(min-width: 768px){
+    .box.center{
+        border-left: 1px solid #111; border-right: 1px solid #111;
+    }
+    .box.right{
+        border-right: 1px solid #111;
+    }
+}
+.box img {
+    width: 100%;
+    height: auto;
+}
+.box .caption{
+    margin-top: 10px;
+    font-family: "BMWRegular";
+    font-size: 18px;
+    line-height: 24px;
+    margin-top: 20px;
+    margin-bottom: 5px;
+    height: 50px;
+}
+.price-box{
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.box .caption b{
+    font-family: "BMWBold";
+    font-weight: 500;
+}
+.box a{
+    text-align: center;
+    font-family: "BMWLight";
+    color: #d4af7a;
+    font-size: 18px;
+}
+#services .caption{
+    font-family: 'BMWRegular';
+    font-size: 22px;
+    text-transform: uppercase;
+    text-align: left;
+    line-height: 25px;
+    margin: 20px 0px;
+    min-height: 81px
+}
+#services b{
+    font-size: 40px;
+}
+#aboutLashesHome {
+    font-family: "BMWLight";
+}
+#aboutLashesHome h1 {
+    font-family: "BMWRegular";
+    font-size: 40px;
+    text-transform: uppercase;
+    color: #d3ae79;
+}
+#aboutLashesHome p {
+    font-family: "BMWRegular";
+    font-size: 18px;
+    line-height: 1.1em;
+}
+.list-group {
+    padding-left: 0px;
+    margin-bottom: 20px;
+}
+.list-group-item {
+    position: relative;
+    display: block;
+    padding: 10px 15px;
+    margin-bottom: -1px;
+    background-color: #FFF;
+    border: 1px solid #DDD;
+}
+a.list-group-item, button.list-group-item {
+    color: #555;
+}
+.list-group-item.active, .list-group-item.active:focus, .list-group-item.active:hover {
+    z-index: 2;
+    color: #FFF;
+    background-color: #d4af7a;
+    border-color: #d4af7a;
+}
+.list-group-item:first-child {
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+.list-group-item:last-child {
+    margin-bottom: 0px;
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+
+.product-image{
+    padding-top: 20px;
+    width: 100%;
+}
+.more-views ul{
+    list-style-type: none;
+    padding-left: 0px;
+    margin: 5px 5px 0px 0px;
+}
+
+/* WORDPRESS*/
+
+#content>.page-title {
+    display: none;
+}
+.show-this-title-please {
+    display: block!important;
+}
+.form-inline button{
+    position: relative;
+    top: -5px;
+}
+.form-control.qty{
+    width: 60px;
+}
+#jsmeVioletHr {
+    background-color: #d4af7a;
+    height:1px;
+}
+#jsemEkaterinaH {
+    font-size: 28px;
+    margin: 20px 0;
+    font-family: "BMWRegular";
+}
+#jsmeEkaterinap {
+    font-size: 17px;
+    vertical-align: bottom;
+}
+.jsmeRadekLidi {
+    margin: 50px 0;
+}
+.jsmeRadekLidi div div img {
+    border-bottom: 2px solid #d4af7a;
+}
+.jsmeRadekLidi div p {
+    text-align: center;
+    padding: 5px;
+    font-family: "BMWLight";
+    font-size: 16px;
+}
