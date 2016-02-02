@@ -37,12 +37,12 @@
 <?php if ($_product->getImage() != 'no_selection' && $_product->getImage()): ?>
 
     <?php
-        $_img = '<img class="product-image" src="'.$this->helper('catalog/image')->init($_product, 'image')->resize(400).'" alt="'.$this->escapeHtml($this->getImageLabel()).'" title="'.$this->escapeHtml($this->getImageLabel()).'" />';
+        $_img = '<img class="product-image" src="'.$this->helper('catalog/image')->init($_product, 'image').'" alt="'.$this->escapeHtml($this->getImageLabel()).'" title="'.$this->escapeHtml($this->getImageLabel()).'" />';
         echo $_helper->productAttribute($_product, $_img, 'image');
     ?>
 <?php else: ?>
     <?php
-        $_img = '<img class="product-image"  src="'.$this->helper('catalog/image')->init($_product, 'image')->resize(400).'" alt="'.$this->escapeHtml($this->getImageLabel()).'" title="'.$this->escapeHtml($this->getImageLabel()).'" />';
+        $_img = '<img class="product-image"  src="'.$this->helper('catalog/image')->init($_product, 'image').'" alt="'.$this->escapeHtml($this->getImageLabel()).'" title="'.$this->escapeHtml($this->getImageLabel()).'" />';
         echo $_helper->productAttribute($_product, $_img, 'image');
     ?>
 <?php endif; ?>
