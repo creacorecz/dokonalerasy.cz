@@ -42,6 +42,11 @@
     <reference name="top.links">
         <action method="removeLinkByUrl"><url helper="customer/getLogintUrl"/></action>
         <remove name="wishlist_link"/>
+        <remove name="checkout_cart_link"/>
+        <block type="checkout/links" name="checkout_cart_link_custom">
+            <action method="addCartLink"></action>
+            <!--<action method="addCheckoutLink"></action>-->
+        </block>
     </reference>
 </customer_logged_in>
 
