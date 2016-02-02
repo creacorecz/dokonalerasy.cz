@@ -503,6 +503,10 @@ a.list-group-item, button.list-group-item {
     font-size: 17px;
     vertical-align: bottom;
 }
+#jsmeVioletPopis {
+    font-size: 17px;
+    padding: 20px 0;
+}
 .jsmeRadekLidi {
     margin: 50px 0;
 }
@@ -514,4 +518,5 @@ a.list-group-item, button.list-group-item {
     padding: 5px;
     font-family: "BMWLight";
     font-size: 16px;
+    clear:both;
 }
