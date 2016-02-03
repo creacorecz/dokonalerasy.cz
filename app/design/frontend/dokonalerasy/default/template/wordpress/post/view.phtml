@@ -11,9 +11,11 @@
 <?php if ($post): ?>
 	<?php $helper = $this->helper('wordpress') ?>
 	<?php $author = $post->getAuthor() ?>
+	<?php if($post ->getPostType() != "page"): ?>
 	<div class="page-title post-title show-this-title-please">
 		<h1><?php  echo $this->escapeHtml($post->getPostTitle()) ?></h1>
 	</div>
+	<?php endif; ?>
 	<div class="post-view">
 		<?php echo $this->getBeforePostContentHtml() ?>
 		<div class="post-entry entry std<?php if ($post->getFeaturedImage()): ?> post-entry-with-image<?php endif; ?>">
