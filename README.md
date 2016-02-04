@@ -1,11 +1,13 @@
 <h2>Init</h2>
-<br />V magento root folder:
+V magento root folder:
 <br />git init
-<br />git remote add origin https://github.com/creacorecz/dokonalerasy.cz.git
-<br />git add app/design/frontend/dokonalerasy
-<br />git add skin/frontend/dokonalerasy
+<br />git remote add [název] https://github.com/creacorecz/dokonalerasy.cz.git
 <h2>Nahrání</h2>
-git commit -m [název]
-<br />git push -u origin master
+git add app/design/frontend/dokonalerasy
+<br />git add skin/frontend/dokonalerasy
+<br />git commit [název]
+<br />git push origin master
 <h2>Stažení</h2>
 git pull origin master
+<h2>Změna branch</h2>
+git checkout -b [název]
