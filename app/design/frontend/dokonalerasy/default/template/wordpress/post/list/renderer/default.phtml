@@ -7,38 +7,27 @@
  */
 ?>
 <?php $post = $this->getPost() ?>
-<div class="post-list-item col-md-12">
-	<h2><a href="<?php echo $post->getPermalink() ?>" title="<?php echo $this->escapeHtml($post->getPostTitle()) ?>"><?php echo $this->escapeHtml($post->getPostTitle()) ?></a></h2>
+<div class="col-md-12 post">
 	<?php echo $this->getBeforePostContentHtml() ?>
-	<div class="row">
 		<?php if ($post->isViewableForVisitor()): ?>
-			<?php if ($featuredImage = $post->getFeaturedImage()): ?>
-				<div class="col-md-4">
+				<div class="row">
+					<div class="col-md-4">
+						<?php if ($featuredImage = $post->getFeaturedImage()): ?>
+							<img width="345" height="280" src="<?php echo $featuredImage->getAvailableImage() ?>" alt="<?php echo $this->escapeHtml($post->getPostTitle()) ?>"/>
+						<?php else: ?>
+							<img width="345" height="280" src="http://placehold.it/345x280" alt="<?php echo $this->escapeHtml($post->getPostTitle()) ?>"/>
+						<?php endif; ?>
+					</div>
+					<div class="col-md-8">
+						<h2><?php echo $this->escapeHtml($post->getPostTitle()) ?></h2>
+						<?php $content = $post->getPostContent(); $content = strip_tags($content); echo substr($content, 0, 800) . "..."; ?>
+						<div style="margin-top: 15px">
+							<a href="<?php echo $post->getPermalink() ?>" title="<?php echo $this->escapeHtml($post->getPostTitle()) ?>" class="btn btn-primary">Celý příspěvek</a>
+						</div>
+					</div>
 				</div>
-				<div class="col-md-8">
-					<a href="<?php echo $post->getPermalink() ?>" title="<?php echo $this->escapeHtml($post->getPostTitle()) ?>"><img src="<?php echo $featuredImage->getAvailableImage() ?>" alt="<?php echo $this->escapeHtml($post->getPostTitle()) ?>"/></a>
-					<?php if ($this->displayExcerptInFeed() || $post->hasMoreTag()): ?>
-						<?php echo $post->getPostExcerpt() ?>
-					<?php else: ?>
-						<?php echo $post->getPostContent() ?>
-					<?php endif; ?>
-				</div>
-			<?php else: ?>
-				<div class="col-md-4">
-					<img src="placehold.it/800x800">
-				</div>
-				<div class="col-md-8">
-					<a href="<?php echo $post->getPermalink() ?>" title="<?php echo $this->escapeHtml($post->getPostTitle()) ?>"><img src="<?php echo $featuredImage->getAvailableImage() ?>" alt="<?php echo $this->escapeHtml($post->getPostTitle()) ?>"/></a>
-					<?php if ($this->displayExcerptInFeed() || $post->hasMoreTag()): ?>
-						<?php echo $post->getPostExcerpt() ?>
-					<?php else: ?>
-						<?php echo $post->getPostContent() ?>
-					<?php endif; ?>
-				</div>
-			<?php endif; ?>
 		<?php else: ?>
 			<?php echo $this->getPasswordProtectHtml($post) ?>
 		<?php endif; ?>
-	</div>
 	<?php echo $this->getAfterPostContentHtml() ?>
 </div>
