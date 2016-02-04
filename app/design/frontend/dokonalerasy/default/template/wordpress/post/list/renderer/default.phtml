@@ -13,9 +13,9 @@
 				<div class="row">
 					<div class="col-md-4">
 						<?php if ($featuredImage = $post->getFeaturedImage()): ?>
-							<img width="345" height="280" src="<?php echo $featuredImage->getAvailableImage() ?>" alt="<?php echo $this->escapeHtml($post->getPostTitle()) ?>"/>
+							<div class="image" style="background-image: url('<?php echo $featuredImage->getAvailableImage() ?>');" alt="<?php echo $this->escapeHtml($post->getPostTitle()) ?>"></div>
 						<?php else: ?>
-							<img width="345" height="280" src="http://placehold.it/345x280" alt="<?php echo $this->escapeHtml($post->getPostTitle()) ?>"/>
+							<div class="image" style="background-image: url('http://placehold.it/345x280');" alt="<?php echo $this->escapeHtml($post->getPostTitle()) ?>"></div>
 						<?php endif; ?>
 					</div>
 					<div class="col-md-8">

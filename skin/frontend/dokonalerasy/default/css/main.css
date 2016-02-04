@@ -537,3 +537,8 @@ a.list-group-item, button.list-group-item {
 .post_list .post:last-of-type{
     border-bottom: none;
 }
+.post .image{
+    max-width: 345px;
+    max-height: 280px;
+    background-size: cover;
+}
