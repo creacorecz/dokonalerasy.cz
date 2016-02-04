@@ -13,7 +13,7 @@
 				<div class="row">
 					<div class="col-md-4">
 						<?php if ($featuredImage = $post->getFeaturedImage()): ?>
-							<img width="345" height="280" src="<?php echo $featuredImage->getAvailableImage()->resize(345, 280) ?>" alt="<?php echo $this->escapeHtml($post->getPostTitle()) ?>"/>
+							<img width="345" height="280" src="<?php echo $featuredImage->getAvailableImage() ?>" alt="<?php echo $this->escapeHtml($post->getPostTitle()) ?>"/>
 						<?php else: ?>
 							<img width="345" height="280" src="http://placehold.it/345x280" alt="<?php echo $this->escapeHtml($post->getPostTitle()) ?>"/>
 						<?php endif; ?>
