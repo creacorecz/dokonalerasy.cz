@@ -3,7 +3,7 @@
 <default>
     <reference name="root" template="page/1column.phtml">
         <reference name="head">
-            <action method="addItem"><type>skin_js</type><name>js/jquery-2.2.0.min.js</name></action>
+            <action method="addItem"><type>skin_js</type><name>js/jquery-2.1.0.min.js</name></action>
             <action method="addItem"><type>skin_js</type><name>js/bootstrap.min.js</name></action>
             <action method="addItem"><type>skin_js</type><name>js/swiper.min.js</name></action>
             <action method="addItem"><type>skin_js</type><name>js/main.js</name></action>

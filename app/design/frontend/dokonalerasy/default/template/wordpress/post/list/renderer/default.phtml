@@ -7,20 +7,34 @@
  */
 ?>
 <?php $post = $this->getPost() ?>
-<div class="post-list-item col-md-10 col-md-offset-1">
+<div class="post-list-item col-md-12">
 	<h2><a href="<?php echo $post->getPermalink() ?>" title="<?php echo $this->escapeHtml($post->getPostTitle()) ?>"><?php echo $this->escapeHtml($post->getPostTitle()) ?></a></h2>
 	<?php echo $this->getBeforePostContentHtml() ?>
-	<div class="post-entry entry<?php if ($post->getFeaturedImage()): ?> post-entry-with-image<?php endif; ?>">
+	<div class="row">
 		<?php if ($post->isViewableForVisitor()): ?>
 			<?php if ($featuredImage = $post->getFeaturedImage()): ?>
-				<div class="featured-image left">
-					<a href="<?php echo $post->getPermalink() ?>" title="<?php echo $this->escapeHtml($post->getPostTitle()) ?>"><img src="<?php echo $featuredImage->getAvailableImage() ?>" alt="<?php echo $this->escapeHtml($post->getPostTitle()) ?>"/></a>
+				<div class="col-md-4">
 				</div>
-			<?php endif; ?>
-			<?php if ($this->displayExcerptInFeed() || $post->hasMoreTag()): ?>
-				<?php echo $post->getPostExcerpt() ?>
+				<div class="col-md-8">
+					<a href="<?php echo $post->getPermalink() ?>" title="<?php echo $this->escapeHtml($post->getPostTitle()) ?>"><img src="<?php echo $featuredImage->getAvailableImage() ?>" alt="<?php echo $this->escapeHtml($post->getPostTitle()) ?>"/></a>
+					<?php if ($this->displayExcerptInFeed() || $post->hasMoreTag()): ?>
+						<?php echo $post->getPostExcerpt() ?>
+					<?php else: ?>
+						<?php echo $post->getPostContent() ?>
+					<?php endif; ?>
+				</div>
 			<?php else: ?>
-				<?php echo $post->getPostContent() ?>
+				<div class="col-md-4">
+					<img src="placehold.it/800x800">
+				</div>
+				<div class="col-md-8">
+					<a href="<?php echo $post->getPermalink() ?>" title="<?php echo $this->escapeHtml($post->getPostTitle()) ?>"><img src="<?php echo $featuredImage->getAvailableImage() ?>" alt="<?php echo $this->escapeHtml($post->getPostTitle()) ?>"/></a>
+					<?php if ($this->displayExcerptInFeed() || $post->hasMoreTag()): ?>
+						<?php echo $post->getPostExcerpt() ?>
+					<?php else: ?>
+						<?php echo $post->getPostContent() ?>
+					<?php endif; ?>
+				</div>
 			<?php endif; ?>
 		<?php else: ?>
 			<?php echo $this->getPasswordProtectHtml($post) ?>

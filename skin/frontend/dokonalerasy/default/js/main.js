@@ -1,3 +1,5 @@
+$.noConflict();
+jQuery( document ).ready(function( $ ) {
 $(document).ready(function(){
     var mySwiper = new Swiper ('.swiper-container', {
         // Optional parameters
@@ -51,3 +53,4 @@ function menu() {
         $("#secondary").fadeOut(20);
     }
 }
+});
