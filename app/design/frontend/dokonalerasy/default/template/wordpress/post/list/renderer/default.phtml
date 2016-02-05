@@ -13,9 +13,19 @@
 				<div class="row">
 					<div class="col-md-4">
 						<?php if ($featuredImage = $post->getFeaturedImage()): ?>
-							<img width="345" height="280" src="<?php echo $featuredImage->getAvailableImage() ?>" alt="<?php echo $this->escapeHtml($post->getPostTitle()) ?>"/>
+							<?php
+							$imageObj = new Varien_Image($featuredImage->getMediumImage());
+							$imageObj->constrainOnly(TRUE);
+							$imageObj->keepAspectRatio(false);
+							$imageObj->keepFrame(FALSE);
+//$width, $height - sizes you need (Note: when keepAspectRatio(TRUE), height would be ignored)
+							$imageObj->resize(375, 280);
+//$newPath - name of resized image
+							$imageObj->save();
+							?>
+							<img width="375" height="280" src="<?php echo $featuredImage->getMediumImage() ?>" alt="<?php echo $this->escapeHtml($post->getPostTitle()) ?>"/>
 						<?php else: ?>
-							<img width="345" height="280" src="http://placehold.it/345x280" alt="<?php echo $this->escapeHtml($post->getPostTitle()) ?>"/>
+							<img width="375" height="280" src="http://placehold.it/345x280" alt="<?php echo $this->escapeHtml($post->getPostTitle()) ?>"/>
 						<?php endif; ?>
 					</div>
 					<div class="col-md-8">

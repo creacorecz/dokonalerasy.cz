@@ -537,3 +537,9 @@ a.list-group-item, button.list-group-item {
 .post_list .post:last-of-type{
     border-bottom: none;
 }
+.post_list .post_image{
+    width: 370px;
+    height: 280px;
+    background-size: cover;
+    background-image: url('http://placehold.it/370x280');
+}
