@@ -21,7 +21,7 @@
 //$width, $height - sizes you need (Note: when keepAspectRatio(TRUE), height would be ignored)
 							$imageObj->resize(375, 280);
 //$newPath - name of resized image
-							$imageObj->save();
+							$imageObj->save($featuredImage->getMediumImage());
 							?>
 							<img width="375" height="280" src="<?php echo $featuredImage->getMediumImage() ?>" alt="<?php echo $this->escapeHtml($post->getPostTitle()) ?>"/>
 						<?php else: ?>
