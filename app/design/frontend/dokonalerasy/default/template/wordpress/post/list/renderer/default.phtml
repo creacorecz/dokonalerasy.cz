@@ -10,22 +10,20 @@
 <div class="col-md-12 post">
 	<?php echo $this->getBeforePostContentHtml() ?>
 		<?php if ($post->isViewableForVisitor()): ?>
-				<div class="row">
 					<div class="col-md-4">
 						<?php if ($featuredImage = $post->getFeaturedImage()): ?>
-							<img width="375" height="280" src="<?php echo $featuredImage->getMediumImage() ?>" alt="<?php echo $this->escapeHtml($post->getPostTitle()) ?>"/>
+							<img width="375" height="280" class="img-responsive" src="<?php echo $featuredImage->getMediumImage() ?>" alt="<?php echo $this->escapeHtml($post->getPostTitle()) ?>"/>
 						<?php else: ?>
-							<img width="375" height="280" src="http://placehold.it/345x280" alt="<?php echo $this->escapeHtml($post->getPostTitle()) ?>"/>
+							<img width="375" height="280" class="img-responsive" src="http://placehold.it/345x280" alt="<?php echo $this->escapeHtml($post->getPostTitle()) ?>"/>
 						<?php endif; ?>
 					</div>
 					<div class="col-md-8">
 						<h2><?php echo $this->escapeHtml($post->getPostTitle()) ?></h2>
-						<?php $content = $post->getPostContent(); $content = strip_tags($content); echo substr($content, 0, 800) . "..."; ?>
+						<?php $content = $post->getPostContent(); $content = strip_tags($content); echo substr($content, 0, 700) . "..."; ?>
 						<div style="margin-top: 15px">
 							<a href="<?php echo $post->getPermalink() ?>" title="<?php echo $this->escapeHtml($post->getPostTitle()) ?>" class="btn btn-primary">Celý příspěvek</a>
 						</div>
 					</div>
-				</div>
 		<?php else: ?>
 			<?php echo $this->getPasswordProtectHtml($post) ?>
 		<?php endif; ?>
