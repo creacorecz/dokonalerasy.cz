@@ -14,7 +14,7 @@
 						<?php if ($featuredImage = $post->getFeaturedImage()): ?>
 							<a href="<?php echo $post->getPermalink() ?>" title="<?php echo $this->escapeHtml($post->getPostTitle()) ?>"><img class="img-responsive" src="<?php echo $featuredImage->getPostThumbnailImage() ?>" alt="<?php echo $this->escapeHtml($post->getPostTitle()) ?>"/></a>
 						<?php else: ?>
-							<a href="<?php echo $post->getPermalink() ?>" title="<?php echo $this->escapeHtml($post->getPostTitle()) ?>"><img class="img-responsive" src="http://placehold.it/340x160" alt="<?php echo $this->escapeHtml($post->getPostTitle()) ?>"/></a>
+							<a href="<?php echo $post->getPermalink() ?>" title="<?php echo $this->escapeHtml($post->getPostTitle()) ?>"><img class="img-responsive" src="http://placehold.it/240x160" alt="<?php echo $this->escapeHtml($post->getPostTitle()) ?>"/></a>
 						<?php endif; ?>
 					</div>
 					<div class="col-md-8">
