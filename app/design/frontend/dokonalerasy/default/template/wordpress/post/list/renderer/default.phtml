@@ -12,7 +12,7 @@
 		<?php if ($post->isViewableForVisitor()): ?>
 					<div class="col-md-4">
 						<?php if ($featuredImage = $post->getFeaturedImage()): ?>
-							<img width="375" height="280" class="img-responsive" src="<?php echo $featuredImage->getThumbnailImage() ?>" alt="<?php echo $this->escapeHtml($post->getPostTitle()) ?>"/>
+							<img width="375" height="280" class="img-responsive" src="<?php echo $featuredImage->getPostThumbnailImage() ?>" alt="<?php echo $this->escapeHtml($post->getPostTitle()) ?>"/>
 						<?php else: ?>
 							<img width="375" height="280" class="img-responsive" src="http://placehold.it/345x280" alt="<?php echo $this->escapeHtml($post->getPostTitle()) ?>"/>
 						<?php endif; ?>
