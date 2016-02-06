@@ -12,9 +12,9 @@
 		<?php if ($post->isViewableForVisitor()): ?>
 					<div class="col-md-4">
 						<?php if ($featuredImage = $post->getFeaturedImage()): ?>
-							<img class="img-responsive" src="<?php echo $featuredImage->getPostThumbnailImage() ?>" alt="<?php echo $this->escapeHtml($post->getPostTitle()) ?>"/>
+							<a href="<?php echo $post->getPermalink() ?>" title="<?php echo $this->escapeHtml($post->getPostTitle()) ?>"><img class="img-responsive" src="<?php echo $featuredImage->getPostThumbnailImage() ?>" alt="<?php echo $this->escapeHtml($post->getPostTitle()) ?>"/></a>
 						<?php else: ?>
-							<img class="img-responsive" src="http://placehold.it/345x280" alt="<?php echo $this->escapeHtml($post->getPostTitle()) ?>"/>
+							<a href="<?php echo $post->getPermalink() ?>" title="<?php echo $this->escapeHtml($post->getPostTitle()) ?>"><img class="img-responsive" src="http://placehold.it/624x416" alt="<?php echo $this->escapeHtml($post->getPostTitle()) ?>"/></a>
 						<?php endif; ?>
 					</div>
 					<div class="col-md-8">
