@@ -537,6 +537,9 @@ a.list-group-item, button.list-group-item {
     padding: 50px 0px;
     border-top: 1px solid #000;
 }
+.post .img-resposive{
+    width: 100%;
+}
 .btn-group{
     display: flex;
     justify-content: center;
