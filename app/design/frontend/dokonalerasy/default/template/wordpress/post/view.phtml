@@ -7,7 +7,7 @@
  */
 ?>
 <?php $post = $this->getPost() ?>
-<div class="col-md-10 col-md-offset-1">
+<div class="col-md-12">
 <?php if ($post): ?>
 	<?php $helper = $this->helper('wordpress') ?>
 	<?php $author = $post->getAuthor() ?>
@@ -16,17 +16,13 @@
 		<h1><?php  echo $this->escapeHtml($post->getPostTitle()) ?></h1>
 	</div>
 	<?php endif; ?>
-	<div class="post-view">
 		<?php echo $this->getBeforePostContentHtml() ?>
-		<div class="post-entry entry std<?php if ($post->getFeaturedImage()): ?> post-entry-with-image<?php endif; ?>">
 			<?php if ($post->isViewableForVisitor()): ?>
 				<?php echo $post->getPostContent() ?>
 			<?php else: ?>
 				<?php echo $this->getPasswordProtectHtml() ?>
 			<?php endif; ?>
-		</div>
 		<?php echo $this->getAfterPostContentHtml() ?>
 		<?php echo $this->getCommentsHtml() ?>
-	</div>
 </div>
 <?php endif; ?>
