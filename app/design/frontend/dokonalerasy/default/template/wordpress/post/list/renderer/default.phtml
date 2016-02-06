@@ -12,7 +12,7 @@
 		<?php if ($post->isViewableForVisitor()): ?>
 				<div class="row">
 					<div class="col-md-4">
-						<?php if ($featuredImage = $post->getFeaturedImage()): ?>
+						<?php if ($featuredImage = $post->getThumbnailImage()): ?>
 							<img width="375" height="280" src="<?php echo $featuredImage->getMediumImage() ?>" alt="<?php echo $this->escapeHtml($post->getPostTitle()) ?>"/>
 						<?php else: ?>
 							<img width="375" height="280" src="http://placehold.it/345x280" alt="<?php echo $this->escapeHtml($post->getPostTitle()) ?>"/>
