@@ -12,14 +12,14 @@
 		<?php if ($post->isViewableForVisitor()): ?>
 					<div class="col-md-4">
 						<?php if ($featuredImage = $post->getFeaturedImage()): ?>
-							<img width="375" height="280" class="img-responsive" src="<?php echo $featuredImage->getPostThumbnailImage() ?>" alt="<?php echo $this->escapeHtml($post->getPostTitle()) ?>"/>
+							<img class="img-responsive" src="<?php echo $featuredImage->getPostThumbnailImage() ?>" alt="<?php echo $this->escapeHtml($post->getPostTitle()) ?>"/>
 						<?php else: ?>
-							<img width="375" height="280" class="img-responsive" src="http://placehold.it/345x280" alt="<?php echo $this->escapeHtml($post->getPostTitle()) ?>"/>
+							<img class="img-responsive" src="http://placehold.it/345x280" alt="<?php echo $this->escapeHtml($post->getPostTitle()) ?>"/>
 						<?php endif; ?>
 					</div>
 					<div class="col-md-8">
 						<h2><?php echo $this->escapeHtml($post->getPostTitle()) ?></h2>
-						<?php $content = $post->getPostContent(); $content = strip_tags($content); echo substr($content, 0, 700) . "..."; ?>
+						<?php $content = $post->getPostContent(); $content = strip_tags($content); echo substr($content, 0, 600) . "..."; ?>
 						<div style="margin-top: 15px">
 							<a href="<?php echo $post->getPermalink() ?>" title="<?php echo $this->escapeHtml($post->getPostTitle()) ?>" class="btn btn-primary">Celý příspěvek</a>
 						</div>
