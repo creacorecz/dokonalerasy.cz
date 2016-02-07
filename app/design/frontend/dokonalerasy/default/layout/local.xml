@@ -13,6 +13,9 @@
             <action method="addItem"><type>skin_css</type><name>css/main.css</name></action>
         </reference>
     </reference>
+    <reference name="methods">
+
+    </reference>
 </default>
 
     <customer_logged_out>
