@@ -21,9 +21,7 @@ body {
     font-family: "BMWLight";
     color: #000;
 }
-h1, .h1{
-    font-size: 24px;
-}
+
 a{
     color: #000;
     outline: none;
@@ -539,6 +537,9 @@ a.list-group-item, button.list-group-item {
 .post_list .post{
     padding: 50px 0px;
     border-top: 1px solid #000;
+}
+.post h1{
+    font-size: 24px;
 }
 .post .img-responsive{
     width: 100%;
