@@ -18,7 +18,7 @@
 						<?php endif; ?>
 					</div>
 					<div class="col-md-8">
-						<h3><?php echo $this->escapeHtml($post->getPostTitle()) ?></h3>
+						<h1><?php echo $this->escapeHtml($post->getPostTitle()) ?></h1>
 						<?php $content = $post->getPostContent(); $content = strip_tags($content); echo substr($content, 0, 600) . "..."; ?>
 						<div style="margin-top: 15px">
 							<a href="<?php echo $post->getPermalink() ?>" title="<?php echo $this->escapeHtml($post->getPostTitle()) ?>" class="btn btn-primary">Celý příspěvek</a>
