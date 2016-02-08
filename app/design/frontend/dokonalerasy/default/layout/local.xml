@@ -3,13 +3,15 @@
 <default>
     <reference name="root" template="page/1column.phtml">
         <reference name="head">
-            <action method="addItem"><type>skin_js</type><name>js/jquery-2.1.0.min.js</name></action>
+            <action method="addItem"><type>skin_js</type><name>js/jquery.min.js</name></action>
             <action method="addItem"><type>skin_js</type><name>js/bootstrap.min.js</name></action>
             <action method="addItem"><type>skin_js</type><name>js/swiper.min.js</name></action>
+            <action method="addItem"><type>skin_js</type><name>js/simple-lightbox.min.js</name></action>
             <action method="addItem"><type>skin_js</type><name>js/main.js</name></action>
             <action method="addItem"><type>skin_css</type><name>css/bootstrap.min.css</name></action>
             <action method="addItem"><type>skin_css</type><name>css/swiper.min.css</name></action>
             <action method="addItem"><type>skin_css</type><name>css/font-awesome.min.css</name></action>
+            <action method="addItem"><type>skin_css</type><name>css/simplelightbox.min.css</name></action>
             <action method="addItem"><type>skin_css</type><name>css/main.css</name></action>
         </reference>
     </reference>

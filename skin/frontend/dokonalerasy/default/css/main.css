@@ -55,6 +55,10 @@ a:active, a:focus, a:hover{
         width: 1170px;
     }
 }
+
+.navbar-fixed-top, .navbar-fixed-bottom {
+    z-index: 1000;
+}
 .navbar-default{
     font-family: 'Josefin Sans', sans-serif;
     border: none;
@@ -550,4 +554,15 @@ a.list-group-item, button.list-group-item {
 }
 span.btn{
     cursor: default;
+}
+
+img[class*="wp-image-"]{
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+.sl-overlay{
+    background: #000;
+}
+.sl-wrapper button{
+    color: #fff;
 }

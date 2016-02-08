@@ -53,4 +53,12 @@ function menu() {
         $("#secondary").fadeOut(20);
     }
 }
+
+    $(function(){
+        var $gallery = $('a[data-lightbox]').simpleLightbox({
+            disableScroll: false,
+            showCounter: false
+        });
+    });
+
 });
