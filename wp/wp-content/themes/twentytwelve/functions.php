@@ -495,6 +495,7 @@ function twentytwelve_customize_preview_js() {
 }
 add_action( 'customize_preview_init', 'twentytwelve_customize_preview_js' );
 
+add_image_size ( "QFHD", 3840, 2160 );
 
 function filter_image_tag($html, $id, $alt, $title, $align, $size) {
 
@@ -507,8 +508,8 @@ function filter_image_tag($html, $id, $alt, $title, $align, $size) {
 	$class = ' wp-image-' . $id;
 
 	$class = apply_filters( 'get_image_tag_class', $class, $id, $align, $size );
-
-	$html = '<a data-lightbox href="' . wp_get_attachment_url( $id ) . '"><img src="' . esc_attr($img_src) . '" alt="' . esc_attr($alt) . '" ' . $title . $hwstring . 'class="' . $class . '" /></a>';
+	$lightbox_img = wp_get_attachment_image_src($id, "QFHD");
+	$html = '<a data-lightbox href="' .  $lightbox_img[0] . '"><img src="' . esc_attr($img_src) . '" alt="' . esc_attr($alt) . '" ' . $title . $hwstring . 'class="' . $class . '" /></a>';
 
 	return $html;
 }
