@@ -609,3 +609,39 @@ img[class*="wp-image-"]{
 .kurzImg {
     padding: 20px;
 }
+/* CEZET Map v2.2		          */
+/* 8.3.2013 (c) Moravio.com 	  */
+/* Licence CC BY 				  */
+
+/* ============================== */
+/* obecne nastaveni mapy          */
+/* ============================== */
+
+.cezetmap{
+    /* width & height ratio: 1.734 */
+    width: 800px;
+    height: 461px;
+}
+
+.cezetmap .kraje{
+    font-size: 800px;
+}
+
+
+.cezetmap .zlinsky                   { color: #AAA; }
+.cezetmap .moravskoslezsky           { color: #AAA; }
+.cezetmap .jihomoravsky              { color: #AAA; }
+.cezetmap .olomoucky                 { color: #AAA; }
+.cezetmap .vysocina                  { color: #AAA; }
+.cezetmap .pardubicky                { color: #AAA; }
+.cezetmap .kralovehradecky           { color: #AAA; }
+.cezetmap .jihocesky                 { color: #AAA; }
+.cezetmap .hlavni-mesto-praha        { color: #AAA; }
+.cezetmap .stredocesky               { color: #AAA; }
+.cezetmap .liberecky                 { color: #AAA; }
+.cezetmap .plzensky                  { color: #AAA; }
+.cezetmap .ustecky                   { color: #AAA; }
+.cezetmap .karlovarsky               { color: #AAA; }
+
+.cezetmap .kraj_hover                { color: #d3ae79;; }
+.cezetmap .kraj_active               { color: #6A4113; }
