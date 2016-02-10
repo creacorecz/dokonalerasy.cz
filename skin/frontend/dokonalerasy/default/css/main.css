@@ -569,3 +569,43 @@ img[class*="wp-image-"]{
 .sl-wrapper button{
     color: #fff;
 }
+
+/*KURZY*/
+.kurzH {
+    margin: 20px auto;
+}
+.kurzHMalym {
+    font-family:"BMWLight";
+    font-size: 36px;
+}
+.kurzHVelkym {
+    font-size: 56px;
+    font-family: "BMWLight";
+    margin-left: 5px;
+}
+.kurzPopis {
+    font-family: "BMWLight";
+    font-size: 21px;
+    line-height: 30px;
+    padding: 20px;
+    padding-top: 50px;
+
+}
+.kurzPopis a {
+    float: right;
+    margin-top: 10px;
+    text-transform: lowercase;
+    font-size: 20px;
+    padding-left:  20px;
+    padding-right:  20px;
+
+
+}
+.border-bottom {
+    padding-top:30px;
+    padding-bottom: 60px;
+    border-bottom: 1px solid black;
+}
+.kurzImg {
+    padding: 20px;
+}
