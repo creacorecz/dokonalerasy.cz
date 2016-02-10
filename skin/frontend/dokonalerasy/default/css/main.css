@@ -1,4 +1,7 @@
-@import url(https://fonts.googleapis.com/css?family=Josefin+Sans:400,300,600&subset=latin,latin-ext);
+@font-face {
+    font-family: 'Josefin Sans';
+    src: url('../fonts/JosefinSans-SemiBold.ttf');
+}
 @font-face {
     font-family: 'BMWRegular';
     src: url('../fonts/BMWRg.ttf'), url('../fonts/BMWRg.eot');
@@ -15,7 +18,7 @@
 html, body {
     position: relative;
     height: 100%;
-    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Josefin Sans';
 }
 body {
     font-family: "BMWLight";
@@ -55,8 +58,12 @@ a:active, a:focus, a:hover{
         width: 1170px;
     }
 }
+
+.navbar-fixed-top, .navbar-fixed-bottom {
+    z-index: 1000;
+}
 .navbar-default{
-    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Josefin Sans';
     border: none;
     -webkit-box-shadow: 0 -2px 10px 0 rgba(0,0,0,1);
     box-shadow: 0 -2px 10px 0 rgba(0,0,0,1);
@@ -83,7 +90,7 @@ a:active, a:focus, a:hover{
     outline: none;
     padding-left: 5px;
     padding-right: 10px;
-    font-weight: 600;
+    font-weight: 500;
     color: #000;
 }
 .navbar-default .container{
@@ -550,4 +557,15 @@ a.list-group-item, button.list-group-item {
 }
 span.btn{
     cursor: default;
+}
+
+img[class*="wp-image-"]{
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+.sl-overlay{
+    background: #000;
+}
+.sl-wrapper button{
+    color: #fff;
 }
