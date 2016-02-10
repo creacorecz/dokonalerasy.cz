@@ -646,3 +646,22 @@ img[class*="wp-image-"]{
 
 .cezetmap .kraj_hover                { color: #d3ae79;; }
 .cezetmap .kraj_active               { color: #6A4113; }
+
+.legenda .objem{
+    background-color: rgb(106, 65, 19);
+}
+.fa .objem{
+    color: rgb(106, 65, 19);
+}
+.legenda .d_3d{
+    background-color: rgb(202, 139, 0);
+}
+.fa .d_3d{
+    color: rgb(202, 139, 0);
+}
+.legenda .dokonale_rasy{
+    background-color: rgb(211, 174, 121);
+}
+.fa .dokonale_rasy{
+    color: rgb(211, 174, 121);
+}
