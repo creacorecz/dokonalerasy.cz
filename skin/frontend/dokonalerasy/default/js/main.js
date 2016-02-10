@@ -1,5 +1,4 @@
-$.noConflict();
-jQuery( document ).ready(function( $ ) {
+$( document ).ready(function() {
 $(document).ready(function(){
     var mySwiper = new Swiper ('.swiper-container', {
         // Optional parameters
