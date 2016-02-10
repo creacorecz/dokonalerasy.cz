@@ -63,6 +63,7 @@
             <action method="setIsHandle"><applied>1</applied></action>
         <reference name="head">
             <action method="addItem"><type>skin_js</type><name>js/swiper.min.js</name></action>
+            <action method="addItem"><type>skin_js</type><name>js/home.js</name></action>
             <action method="addItem"><type>skin_css</type><name>css/swiper.min.css</name></action>
         </reference>
         </reference>
