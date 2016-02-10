@@ -621,6 +621,7 @@ img[class*="wp-image-"]{
     /* width & height ratio: 1.734 */
     width: 800px;
     height: 461px;
+    margin: 30px auto;
 }
 
 .cezetmap .kraje{
