@@ -1,5 +1,4 @@
-$( document ).ready(function() {
-$(document).ready(function(){
+jQuery(document).ready(function(){
     var mySwiper = new Swiper ('.swiper-container', {
         // Optional parameters
         autoplay: 3000,
@@ -10,21 +9,21 @@ $(document).ready(function(){
     })
 });
 <!-- Smooth scrolling script -->
-$(function () {
+jQuery(function () {
 
-    $('a[href^="#"]').click(function(event) {
-        var id = $(this).attr("href");
+    jQuery('a[href^="#"]').click(function(event) {
+        var id = jQuery(this).attr("href");
         var offset = 150;
-        var target = $(id).offset().top - offset;
+        var target = jQuery(id).offset().top - offset;
 
-        $('html, body').animate({scrollTop:target}, 800);
+        jQuery('html, body').animate({scrollTop:target}, 800);
         event.preventDefault();
     });
 
 });
 
-$(window).on('scroll', function(){
-    if($(this).width()>=1100){
+jQuery(window).on('scroll', function(){
+    if(jQuery(this).width()>=1100){
         menu();
         video();
     }
@@ -32,32 +31,30 @@ $(window).on('scroll', function(){
 function video() {
     var position = window.pageYOffset;
     var offset = 1000;
-    var video = $('#promo').offset().top - offset;
+    var video = jQuery('#promo').offset().top - offset;
     if(position > video) {
-        $('#promo').get(0).play();
+        jQuery('#promo').get(0).play();
     }
     else
     {
-        if(!$('#promo').get(0).paused)
+        if(!jQuery('#promo').get(0).paused)
         {
-            $('#promo').get(0).pause();
+            jQuery('#promo').get(0).pause();
         }
     }
 }
 function menu() {
-    if ($(window).scrollTop()>30) {
-        $("#secondary").fadeIn();
+    if (jQuery(window).scrollTop()>30) {
+        jQuery("#secondary").fadeIn();
     }
     else {
-        $("#secondary").fadeOut(20);
+        jQuery("#secondary").fadeOut(20);
     }
 }
 
-    $(function(){
-        var $gallery = $('a[data-lightbox]').simpleLightbox({
-            disableScroll: false,
-            showCounter: false
-        });
+jQuery(function(){
+    var jQuerygallery = jQuery('a[data-lightbox]').simpleLightbox({
+        disableScroll: false,
+        showCounter: false
     });
-
 });
