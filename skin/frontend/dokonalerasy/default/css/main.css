@@ -24,7 +24,9 @@ body {
     font-family: "BMWLight";
     color: #000;
 }
-
+hr{
+    border-top: 1px solid;
+}
 a{
     color: #000;
     outline: none;
