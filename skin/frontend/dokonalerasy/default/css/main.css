@@ -366,6 +366,7 @@ a.fa-social:hover, a.fa-social:focus{
 }
 .grid-shop{
     margin: 50px 0px;
+    clear: both;
 }
 .grid-shop .box{
     border-top: none;
@@ -587,10 +588,10 @@ img[class*="wp-image-"]{
 }
 .kurzPopis {
     font-family: "BMWLight";
-    font-size: 21px;
+    font-size: 19px;
     line-height: 30px;
     padding: 20px;
-    padding-top: 50px;
+    padding-top: 60px;
 
 }
 .kurzPopis a {
@@ -696,4 +697,23 @@ img[class*="wp-image-"]{
 }
 .fa.dokonale_rasy{
     color: rgb(211, 174, 121);
+}
+
+/* ESHOP */
+#eshopPopis {
+    font-family: "BMWLight";
+    font-size: 17px;
+    margin: 20px auto;
+}
+.displayBlock {
+    display: block;
+}
+.clearBoth {
+    clear: both;
+}
+.addToInline {
+    display: inline-block;
+}
+.addToInline div {
+    margin: auto 10px;
 }

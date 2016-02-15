@@ -24,16 +24,19 @@
  * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
  */
 ?>
-
+<div id="addToWhatever"></div>
 <?php $_product = $this->getProduct(); ?>
 <?php $_wishlistSubmitUrl = $this->helper('wishlist')->getAddUrl($_product); ?>
 
 <?php if ($this->helper('wishlist')->isAllow()) : ?>
-  <div><a href="<?php echo $_wishlistSubmitUrl ?>" onclick="productAddToCartForm.submitLight(this, this.href); return false;" class="link-wishlist"><?php echo $this->__('Add to Wishlist') ?></a></div>
+    <div class="addToInline"><a href="<?php echo $_wishlistSubmitUrl ?>"
+            onclick="productAddToCartForm.submitLight(this, this.href); return false;"
+            class="link-wishlist"><?php echo $this->__('Add to Wishlist') ?></a></div>
 <?php endif; ?>
 <?php
-    $_compareUrl = $this->helper('catalog/product_compare')->getAddUrl($_product);
+$_compareUrl = $this->helper('catalog/product_compare')->getAddUrl($_product);
 ?>
-<?php if($_compareUrl) : ?>
-   <div><a href="<?php echo $_compareUrl ?>" class="link-compare"><?php echo $this->__('Add to Compare') ?></a></div>
+<?php if ($_compareUrl) : ?>
+    <div class="addToInline"><a href="<?php echo $_compareUrl ?>" class="link-compare"><?php echo $this->__('Add to Compare') ?></a></div>
 <?php endif; ?>
+</div>

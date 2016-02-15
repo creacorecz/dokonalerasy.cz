@@ -32,45 +32,71 @@
  */
 ?>
 <?php
-$_productCollection=$this->getLoadedProductCollection();
+$_productCollection = $this->getLoadedProductCollection();
 $_helper = $this->helper('catalog/output');
 ?>
-<?php if(!$_productCollection->count()): ?>
-    <p class="note-msg"><?php echo $this->__('There are no products matching the selection.') ?></p>
-<?php else: ?>
-    <div class="grid-shop">
+<div class="col-md-10 col-md-offset-1 displayBlock">
+    <img src="<?php echo $this->getSkinUrl('img/produkty.jpg'); ?>" alt="" class="col-md-10 col-md-offset-1">
 
-        <?php $i = 0; foreach ($_productCollection as $_product): ?>
-            <?php
-            $i++;
-            if($i == 1 || $i %5 == 0):
+    <p id="eshopPopis" class="col-md-12 text-center">Veškerý materiál, který naleznete v našem obchodě, byl vyvinut ve
+        spolupráci s přední řasovou stylistkou Ekaterinou Kimlovou. Vlastnosti produktů jsou založeny na dlouholeté
+        praxi a aktuálních mezinárodních trendech. Všechny produkty jsou důkladně testovány a certifikovány v souladu s
+        pravidly EU. Design projektů v sobě kloubí praktičnost a eleganci, se kterou se můžete hrdě prezentovat.</p>
+</div>
+<?php if (!$_productCollection->count()): ?>
+    <div class="col-md-12">
+        <p class="note-msg"><?php echo $this->__('There are no products matching the selection.') ?></p>
+    </div>
+
+<?php else: ?>
+<div class="grid-shop">
+
+    <?php $i = 0;
+    foreach ($_productCollection as $_product): ?>
+        <?php
+        $i++;
+        if ($i == 1 || $i % 5 == 0):
             ?>
             <div class="row">
-            <?php endif; ?>
-            <div class="box col-sm-3">
-                <a href="<?php echo $_product->getProductUrl() ?>" title="<?php echo $this->stripTags($this->getImageLabel($_product, 'small_image'), null, true) ?>" class="product-image"><img src="<?php echo $this->helper('catalog/image')->init($_product, 'thumbnail'); ?>" alt="<?php echo $this->stripTags($this->getImageLabel($_product, 'small_image'), null, true) ?>" /></a>
-                <div class="caption">
-                <?php echo $_helper->productAttribute($_product, $_product->getName(), 'name') ?>
-                
-                    </div>
+        <?php endif; ?>
+        <div class="box col-sm-3">
+            <a href="<?php echo $_product->getProductUrl() ?>"
+               title="<?php echo $this->stripTags($this->getImageLabel($_product, 'small_image'), null, true) ?>"
+               class="product-image"><img
+                    src="<?php echo $this->helper('catalog/image')->init($_product, 'thumbnail'); ?>"
+                    alt="<?php echo $this->stripTags($this->getImageLabel($_product, 'small_image'), null, true) ?>"/></a>
+
+            <div class="caption">
+                <a href="<?php echo $_product->getProductUrl() ?>">
+                    <?php echo $_helper->productAttribute($_product, $_product->getName(), 'name') ?>
+                </a>
+            </div>
             <div class="actions">
-                <?php if($_product->isSaleable()): ?>
-                <p class="text-success">Skladem</p>
-                <?php echo $this->getPriceHtml($_product, true) ?>
-                    <button type="button" title="<?php echo Mage::helper('core')->quoteEscape($this->__('Add to Cart')) ?>" class="btn btn-primary" onclick="setLocation('<?php echo $this->getAddToCartUrl($_product) ?>')"><span><span><?php echo $this->__('Add to Cart') ?></span></span></button>
+                <?php if ($_product->isSaleable()): ?>
+                    <p class="text-success">Skladem</p>
+                    <?php echo $this->getPriceHtml($_product, true) ?>
+                    <button type="button"
+                            title="<?php echo Mage::helper('core')->quoteEscape($this->__('Add to Cart')) ?>"
+                            class="btn btn-primary"
+                            onclick="setLocation('<?php echo $this->getAddToCartUrl($_product) ?>')">
+                        <span><span><?php echo $this->__('Add to Cart') ?></span></span></button>
                 <?php else: ?>
                     <p class="text-danger"><span><?php echo $this->__('Vyprodáno') ?></span></p>
                     <?php echo $this->getPriceHtml($_product, true) ?>
-                    <button type="button" title="<?php echo Mage::helper('core')->quoteEscape($this->__('Add to Cart')) ?>" disabled class="btn btn-primary" onclick="setLocation('<?php echo $this->getAddToCartUrl($_product) ?>')"><span><span><?php echo $this->__('Add to Cart') ?></span></span></button>
+                    <button type="button"
+                            title="<?php echo Mage::helper('core')->quoteEscape($this->__('Add to Cart')) ?>"
+                            disabled class="btn btn-primary"
+                            onclick="setLocation('<?php echo $this->getAddToCartUrl($_product) ?>')">
+                        <span><span><?php echo $this->__('Add to Cart') ?></span></span></button>
                 <?php endif; ?>
             </div>
-                </div>
-            <?php
-            if($i %4 == 0 || $i == $_productCollection->count()):
-                ?>
-                </div>
-            <?php endif; ?>
-        <?php endforeach ?>
-
+        </div>
+        <?php
+        if ($i % 4 == 0 || $i == $_productCollection->count()):
+            ?>
+            </div>
         <?php endif; ?>
-    </div>
+    <?php endforeach ?>
+
+    <?php endif; ?>
+</div>
