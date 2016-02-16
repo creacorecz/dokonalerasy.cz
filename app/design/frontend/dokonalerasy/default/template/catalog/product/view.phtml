@@ -70,7 +70,7 @@
                         <?php echo $this->getChildHtml('extrahint') ?>
 
                         <?php if (!$this->hasOptions()): ?>
-                            <div class="add-to-box col-md-10 col-md-offset-1" style="margin-top:20px;">
+                            <div class="add-to-box col-md-11 col-md-offset-1">
                                 <?php if ($_product->isSaleable()): ?>
                                     <?php echo $this->getChildHtml('addtocart') ?>
                                     <?php if ($this->helper('wishlist')->isAllow() || $_compareUrl = $this->helper('catalog/product_compare')->getAddUrl($_product)): ?>
@@ -150,9 +150,7 @@
 <div class="product-collateral clearBoth">
     <?php foreach ($this->getChildGroup('detailed_info', 'getChildHtml') as $alias => $html): ?>
         <div class="box-collateral <?php echo "box-{$alias}" ?>">
-            <?php if ($title = $this->getChildData($alias, 'title')): ?>
-                <h2><?php echo $this->escapeHtml($title); ?></h2>
-            <?php endif; ?>
+            <h2 class="produktDetailH col-md-12">Detaily produktu</h2>
             <?php echo $html; ?>
         </div>
     <?php endforeach; ?>

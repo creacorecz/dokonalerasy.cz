@@ -30,7 +30,7 @@
 <div class="form-inline">
     <div class="form-group">
         <?php if(!$_product->isGrouped()): ?>
-        <input type="text" name="qty" id="qty" maxlength="5" value="<?php echo $this->getProductDefaultQty() * 1 ?>" title="<?php echo Mage::helper('core')->quoteEscape($this->__('Qty')) ?>" class="form-control qty" />
+        <input type="number" name="qty" id="qty" min="<?php echo $this->getProductDefaultQty() * 1 ?>" max="1000" value="<?php echo $this->getProductDefaultQty() * 1 ?>" title="<?php echo Mage::helper('core')->quoteEscape($this->__('Qty')) ?>" class="form-control qty" />
     </div>
         <?php endif; ?>
     <div class="form-group">
