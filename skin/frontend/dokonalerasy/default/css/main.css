@@ -579,7 +579,7 @@ img[class*="wp-image-"]{
     font-size: 36px;
 }
 .kurzHVelkym {
-    font-size: 56px;
+    font-size: 53px;
     font-family: "BMWLight";
     margin-left: 5px;
 }
@@ -588,8 +588,12 @@ img[class*="wp-image-"]{
     font-size: 19px;
     line-height: 30px;
     padding: 20px;
+}
+.kurzPopisL {
+    padding-top: 30px;
+}
+.kurzPopisS {
     padding-top: 60px;
-
 }
 .kurzPopis a {
     float: right;
