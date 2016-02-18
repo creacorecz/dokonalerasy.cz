@@ -585,7 +585,7 @@ img[class*="wp-image-"]{
 }
 .kurzPopis {
     font-family: "BMWLight";
-    font-size: 19px;
+    font-size: 18px;
     line-height: 30px;
     padding: 20px;
 }
@@ -699,6 +699,10 @@ img[class*="wp-image-"]{
 .fa.dokonale_rasy{
     color: rgb(211, 174, 121);
 }
+.kraj h2 {
+    padding-left: 10px;
+    border-left: 2px solid #d3ae79;
+}
 
 /* ESHOP */
 #eshopPopis {
@@ -753,8 +757,36 @@ img[class*="wp-image-"]{
     font-size: 20px;
 }
 
-
-
+/* DETAIL KURZU */
+.kurzDetailContainer h1 {
+    font-size:60px;
+    font-family: "BMWRegular";
+    margin-bottom: 0;
+}
+.kurzDetailContainer h2 {
+    font-size: 35px;
+}
+.kurzDetailContainer h3 {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-family: "BMWLight";
+    font-size:25px;
+}
+.basicCouseDesc {
+    margin-top: 20px;
+    font-size:18px;
+}
+.kurzDetailContainer p, .kurzDetailContainer ul {
+    font-size: 18px;
+}
+.kurzDetailContainer ul {
+    padding-left: 55px;
+    padding-right: 50px;
+}
+.kurzRowImage {
+    margin-top: 30px;
+    
+}
 
 
 
