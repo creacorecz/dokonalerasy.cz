@@ -627,6 +627,9 @@ img[class*="wp-image-"]{
     .kurzHMalym {
         font-size: 40px;
     }
+    .kurzDetailContainer h1{
+        font-size: 38px!important;
+    }
 }
 /* CEZET Map v2.2		          */
 /* 8.3.2013 (c) Moravio.com 	  */
@@ -785,7 +788,7 @@ img[class*="wp-image-"]{
 }
 .kurzRowImage {
     margin-top: 30px;
-    
+
 }
 
 
