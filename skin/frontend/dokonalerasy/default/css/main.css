@@ -791,14 +791,124 @@ img[class*="wp-image-"]{
 
 }
 
-
-
-
-
-
-
-
-
+/* PROČ MY*/
+.procMyContainer h1 {
+    font-size:60px;
+}
+.procMyContainer {
+    font-size: 17px;
+}
+.procMyContainer .row {
+    margin-top: 50px;
+}
+.procMyNumber {
+    font-family: "BMWBold";
+    font-size: 35px;
+    padding: 0px;
+    margin: 0px;
+}
+.rowPrvni {
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    padding: 40px 0;
+}
+.rowOsmDevet {
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+.rowOsmDevet>.col-md-9, .rowOsmDevet.col-md-3 {
+    padding-top:40px;
+    padding-bottom: 40px;
+}
+.textDruhy {
+    padding-right: 30px;
+    border-right: 1px solid black;
+    padding-top: 50px;
+    padding-bottom: 40px;
+}
+.lineDruhy {
+    color: black;
+    height: 1px;
+    width: 60%;
+    position: absolute;
+    bottom:-21px;
+    right:0;
+}
+.procMyContainer .row-flex {
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+.procMyContainer .flex-col {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    border-right: 1px solid black;
+}
+.procMyContainer .flex-col .col-md-12 {
+    padding-left: 25px;
+    padding-right:25px;
+}
+.procMyContainer .flex-col img {
+    margin-top: 10px;
+    margin-bottom:10px;
+}
+.procMyContainer .flex-col:last-of-type{
+    border-right:none;
+}
+.textOsm {
+    border-right:1px solid black;
+    padding-right: 30px;
+}
+.procMyFinalImg {
+    padding:40px 0;
+}
+.PbigBlack {
+    font-size: 22px;
+}
+.PbigGold {
+    color:#d2ac67;
+    font-size:22px;
+}
+.PbigGoldBold {
+    font-size: 20px;
+    color: #d2ac67;
+    font-family: "BMWBold";
+}
+.PgoldBold {
+    color: #d2ac67;
+    font-family: "BMWBold";
+}
+/*ROW FLEX*/
+.row-flex, .row-flex > div[class*='col-'] {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex:1 1 auto;
+}
+.row-flex-wrap {
+    -webkit-flex-flow: row wrap;
+    align-content: flex-start;
+    flex:0;
+}
+.row-flex > div[class*='col-'], .container-flex > div[class*='col-'] {
+    margin:-.2px; /* hack adjust for wrapping */
+}
+.container-flex > div[class*='col-'] div,.row-flex > div[class*='col-'] div {
+    width:100%;
+}
+.flex-col {
+    display: flex;
+    display: -webkit-flex;
+    flex: 1 100%;
+    flex-flow: column nowrap;
+}
+.flex-grow {
+    display: flex;
+    -webkit-flex: 2;
+    flex: 2;
+}
+/*ROW FLEX END */
 
 
 
