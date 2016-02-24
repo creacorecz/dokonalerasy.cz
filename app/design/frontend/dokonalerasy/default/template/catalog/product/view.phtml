@@ -67,8 +67,6 @@
                         <?php echo $this->getChildHtml('alert_urls') ?>
                         <?php echo $this->getChildHtml('product_type_data') ?>
                         <?php echo $this->getTierPriceHtml() ?>
-                        <?php echo $this->getChildHtml('extrahint') ?>
-
                         <?php if (!$this->hasOptions()): ?>
                             <div class="add-to-box col-md-11 col-md-offset-1">
                                 <?php if ($_product->isSaleable()): ?>
@@ -153,6 +151,7 @@
             <h2 class="produktDetailH col-md-12">Detaily produktu</h2>
             <?php echo $html; ?>
         </div>
+        <?php echo $this->getChildHtml('related') ?>
     <?php endforeach; ?>
     <?php echo $this->getChildHtml('upsell_products') ?>
 </div>
