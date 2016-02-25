@@ -930,7 +930,27 @@ img[class*="wp-image-"]{
 /*ROW FLEX END */
 
 
+.produktSouvisejici {
+    font-size: 25px;
+    text-align: right;
+    font-family: "BMWBold";
+    padding-bottom: 8px;
+    margin-top: 30px;
+    margin-bottom: 0px;
+}
+.grid-related{
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+}
 
-
-
-
+.grid-related .row{
+    margin: 0px;
+    display: flex;
+}
+.grid-related .box{
+    border-right: 1px solid black;
+    padding: 30px;
+}
+.grid-related .box:nth-child(4n){
+    border-right: none;
+}
