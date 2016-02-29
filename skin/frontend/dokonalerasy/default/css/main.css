@@ -726,8 +726,18 @@ img[class*="wp-image-"]{
     color: rgb(211, 174, 121);
 }
 .kraj h2 {
-    padding-left: 10px;
-    border-left: 2px solid #d3ae79;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #d3ae79;
+    margin-top: 30px;
+    padding-left:0;
+}
+.kraj .row .col-md-4 .kontakt{
+    padding-left:0;
+    padding-right:0;
+}
+.kraj .row .col-md-8 .kontakt{
+    padding-left:0;
+    padding-right:0;
 }
 
 /* ESHOP */
