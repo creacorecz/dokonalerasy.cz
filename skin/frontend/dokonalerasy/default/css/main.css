@@ -512,6 +512,9 @@ a.list-group-item, button.list-group-item {
     background-color: #d4af7a;
     height:1px;
 }
+#jsmeVioletH{
+    font-size: 28px;
+}
 #jsemEkaterinaH {
     font-size: 28px;
     margin: 20px 0;
@@ -535,7 +538,7 @@ a.list-group-item, button.list-group-item {
     text-align: center;
     padding: 5px;
     font-family: "BMWLight";
-    font-size: 16px;
+    font-size: 18px;
     clear:both;
 }
 .post_list .post:first-of-type{
@@ -590,28 +593,33 @@ img[class*="wp-image-"]{
     padding: 20px;
 }
 .kurzPopisL {
-    padding-top: 30px;
+    padding-top: 50px;
 }
 .kurzPopisS {
-    padding-top: 60px;
+    padding-top: 90px;
 }
 .kurzPopis a {
     float: right;
     margin-top: 10px;
     text-transform: lowercase;
-    font-size: 20px;
+    font-size: 18px;
     padding-left:  20px;
     padding-right:  20px;
 
 
 }
 .border-bottom {
-    padding-top:30px;
+    padding-top:0px;
     padding-bottom: 60px;
     border-bottom: 1px solid black;
 }
 .kurzImg {
     padding: 20px;
+}
+.kurzImg img{
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 @media (max-width: 991px) {
     .kurzImg {
@@ -990,7 +998,27 @@ img[class*="wp-image-"]{
     font-family: "BMWRegular";
 }
 
+.produktSouvisejici {
+    font-size: 25px;
+    text-align: right;
+    font-family: "BMWBold";
+    padding-bottom: 8px;
+    margin-top: 30px;
+    margin-bottom: 0px;
+}
+.grid-related{
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+}
 
-
-
-
+.grid-related .row{
+    margin: 0px;
+    display: flex;
+}
+.grid-related .box{
+    border-right: 1px solid black;
+    padding: 30px;
+}
+.grid-related .box:nth-child(4n){
+    border-right: none;
+}
