@@ -630,6 +630,21 @@ img[class*="wp-image-"]{
     .kurzDetailContainer h1{
         font-size: 38px!important;
     }
+    .procMydevitkaTransformovana {
+        top: 0!important;
+        transform: none!important;
+        margin-bottom: 10px;
+    }
+    .procMyContainer img {
+        margin-top: 10px!important;
+        margin-bottom: 10px!important;
+    }
+    .procMyContainer .flex-col, .textOsm {
+        border: none!important;
+    }
+    .mobileClearBoth {
+        clear:both!important;
+    }
 }
 /* CEZET Map v2.2		          */
 /* 8.3.2013 (c) Moravio.com 	  */
@@ -888,6 +903,11 @@ img[class*="wp-image-"]{
     color: #d2ac67;
     font-family: "BMWBold";
 }
+.procMydevitkaTransformovana {
+    position: relative;
+    top: 50%;transform: translateY(+50%);
+}
+
 /*ROW FLEX*/
 .row-flex, .row-flex > div[class*='col-'] {
     display: -webkit-box;
@@ -921,6 +941,54 @@ img[class*="wp-image-"]{
 }
 /*ROW FLEX END */
 
+/* KONTAKTY */
+#kontaktPrimarni {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    font-family: "BMWLight";
+}
+.kontaktKdo {
+    color: #d4af7a;
+    font-size: 23px;
+    font-family: "BMWRegular";
+}
+.kontaktJmeno {
+    font-size: 26px;
+}
+.kontaktTelefon, .kontaktEmail {
+    font-size: 18px;
+}
+.kontaktLR {
+    font-family: "BMWLight";
+    font-size: 18px;
+}
+.kontaktLR p.col-md-11 {
+    font-size: 17px;
+    padding: 0;
+}
+.kontaktLevaStrana h3 {
+    margin-top: 8px;
+    padding: 0;
+    font-size: 19px;
+    margin-bottom: 3px;
+}
+.leftAddSec {
+    margin-top: 8px;
+    padding: 0;
+}
+.kontaktStrediska {
+    font-size: 18px;
+}
+.kontaktStrediska h2 {
+    font-size:30px;
+    border-bottom: 1px solid #d4af7a;
+    margin-bottom: 20px;
+}
+.kontaktStrediska h4 {
+    font-size: 20px;
+    margin-bottom: 3px;
+    font-family: "BMWRegular";
+}
 
 
 
