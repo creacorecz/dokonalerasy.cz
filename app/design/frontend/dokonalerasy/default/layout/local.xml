@@ -15,11 +15,6 @@
             <action method="addItem"><type>skin_css</type><name>css/main.css</name></action>
         </reference>
     </reference>
-    <remove name="left.newsletter" /> <!-- if you want to remove the newsletter block which is on the left side -->
-    <!-- Mage_Newsletter -->
-    <reference name="footer">
-        <block type="newsletter/subscribe" name="newsletter" as="newsletter" template="newsletter/subscribe.phtml" before="-" />
-    </reference>
 </default>
 
     <customer_logged_out>

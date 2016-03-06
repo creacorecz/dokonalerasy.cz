@@ -237,6 +237,7 @@ a:active, a:focus, a:hover{
 }
 #newsletter .btn{
     width: 100%;
+    float: right;
 }
 @media (min-width: 900px){
     #newsletter .btn{
@@ -291,6 +292,15 @@ a.fa-social:hover, a.fa-social:focus{
     border-color: #d3ae79;
     outline: 0px none;
     box-shadow: 0px 1px 1px rgba(211, 174, 121, 0.075) inset, 0px 0px 8px rgba(211, 174, 121, 0.6);
+}
+
+.validation-failed{
+    border-color: #d3ae79;
+    box-shadow: 0px 1px 1px rgba(211, 174, 121, 0.075) inset, 0px 0px 8px rgba(211, 174, 121, 0.6);
+}
+
+.validation-advice{
+    padding-bottom: 7px;
 }
 .btn-primary{
     padding: 10px 15px;

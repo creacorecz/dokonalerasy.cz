@@ -1,0 +1,21 @@
+<?php $helper = $this->helper('mediarocks_newsletterextended'); ?>
+<h1 class="caption">Newsletter</h1>
+<div class="block block-subscribe">
+    <form action="<?php echo $this->getFormActionUrl() ?>" method="post" id="newsletter-validate-detail">
+        <div class="block-content">
+            <?php if (Mage::getStoreConfig('newsletterextended/fields/show_firstname')): ?>
+                <input type="text" name="firstname" id="firstname" class="form-control" placeholder="<?php echo $this->__('First Name') ?>" />
+            <?php endif; ?>
+            <?php if (Mage::getStoreConfig('newsletterextended/fields/show_lastname')): ?>
+                <input type="text" name="lastname" id="lastname" class="form-control" placeholder="<?php echo $this->__('Last Name') ?>" />
+            <?php endif; ?>
+            <input type="text" name="email" id="email" class="form-control required-entry validate-email" placeholder="Email" />
+            <button type="submit" title="<?php echo $this->__('Subscribe') ?>" class="btn btn-primary"><?php echo $this->__('Subscribe') ?></button>
+        </div>
+    </form>
+    <script type="text/javascript">
+        //<![CDATA[
+        var newsletterSubscriberFormDetail = new VarienForm('newsletter-validate-detail');
+        //]]>
+    </script>
+</div>
