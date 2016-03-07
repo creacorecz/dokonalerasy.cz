@@ -55,7 +55,7 @@ $_helper = $this->helper('catalog/output');
     foreach ($_productCollection as $_product): ?>
         <?php
         $i++;
-        if ($i == 1 || $i % 4 == 0):
+        if ($i == 1 || $i % 5 == 0):
             ?>
             <div class="row">
         <?php endif; ?>
@@ -92,7 +92,7 @@ $_helper = $this->helper('catalog/output');
             </div>
         </div>
         <?php
-        if ($i % 4 == 0 || $i == $_productCollection->count()):
+        if ($i % 5 == 0 || $i == $_productCollection->count()):
             ?>
             </div>
         <?php endif; ?>
