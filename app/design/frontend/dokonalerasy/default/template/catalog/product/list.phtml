@@ -75,10 +75,7 @@ $_helper = $this->helper('catalog/output');
                 <?php if ($_product->isSaleable()): ?>
                     <p class="text-success"><i class="fa fa-check"></i> Skladem</p>
                     <?php echo $this->getPriceHtml($_product, true) ?>
-                    <button type="button"
-                            title="<?php echo Mage::helper('core')->quoteEscape($this->__('Add to Cart')) ?>"
-                            class="btn btn-primary"
-                            onclick="setLocation('<?php echo $this->getAddToCartUrl($_product) ?>')">
+                    <button type="button" title="<?php echo Mage::helper('core')->quoteEscape($this->__('Add to Cart')) ?>" class="btn btn-primary" onclick="setLocation('<?php echo $this->getAddToCartUrl($_product) ?>')">
                         <span><span><?php echo $this->__('Add to Cart') ?></span></span></button>
                 <?php else: ?>
                     <p class="text-danger"><span><?php echo $this->__('Vyprodáno') ?></span></p>

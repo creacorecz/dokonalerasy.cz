@@ -1026,7 +1026,6 @@ img[class*="wp-image-"]{
     display: flex;
 }
 .grid-related .caption{
-    height: 70px;
     font-size: 16px;
     line-height: 22px;
 }
