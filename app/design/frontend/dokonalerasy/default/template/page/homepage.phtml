@@ -100,34 +100,33 @@
             </div>
         </div>
     </div>
-    <div class="col-md-12 wrapper grid col-sm-10 col-md-offset-0 col-sm-offset-1">
-        <div class="row" style="">
-            <div class="box col-sm-4" style="padding:40px">
-                <img src="<?php echo $this->getSkinUrl('img/005c_sm.jpg'); ?>" alt="">
-                <div class="caption">
-                    <p>Lepidlo <b>Ultra VOLUME</b></p>
-                    <p>740,00 Kč</p>
+    <div class="col-md-12 wrapper grid-shop col-sm-10 col-md-offset-0 col-sm-offset-1">
+        <?php
+        $products = Mage::getModel('catalog/product')->getCollection();
+        $products->addAttributeToSelect(array('name', 'small_image', 'price')); //feel free to add any other attribues you need.
+        Mage::getSingleton('catalog/product_status')->addVisibleFilterToCollection($products);
+        Mage::getSingleton('catalog/product_visibility')->addVisibleInCatalogFilterToCollection($products);
+        $products->getSelect()->order('RAND()');
+        $products->getSelect()->limit(4);
+        ?>
+            <div class="row">
+            <?php foreach ($products as $product)  : ?>
+                <div class="box col-sm-3">
+                    <a href="<?php echo $product->getProductUrl()?>" class="product-image"><img src="<?php echo Mage::helper('catalog/image')->init($product, 'small_image')?>" alt=""></a>
+                    <div class="caption">
+                        <p><?php echo $product->getName()?></p>
+                    </div>
+                    <div class="actions">
+                        <div class="price-box">
+                            <span><?php echo Mage::app()->getStore()->getCurrentCurrency()->format($product->getFinalPrice());?></span>
+                        </div>
+                        <a href="<?php echo $product->getProductUrl()?>">více zde</a>
+                    </div>
                 </div>
-                <a href="#">více zde</a>
-            </div>
-            <div class="box center col-sm-4" style="padding:40px;">
-                <img src="<?php echo $this->getSkinUrl('img/800_3169_sm.jpg')?>" alt="">
-                <div class="caption">
-                    <p><b>Řasy Mink</b> v krabičce</p>
-                    <p>390,00 Kč</p>
-                </div>
-                <a href="#">více zde</a>
-            </div>
-            <div class="box col-sm-4" style="padding:40px">
-                <img src="<?php echo $this->getSkinUrl('img/800_3221_volume_sm.jpg')?>" alt="">
-                <div class="caption">
-                    <p><b>Microbrushes </b>(100 ks)</p>
-                    <p>740,00 Kč</p>
-                </div>
-                <a href="#">více zde</a>
+            <?php endforeach;?>
             </div>
         </div>
-    </div>
+
     <div class="col-md-12 wrapper" style="text-align: center;">
         <div class="row">
     <div class="col-md-12 wrapper" style="font-family:'BMWLight'; margin-top:0px; margin-bottom:10px; text-align: center;">

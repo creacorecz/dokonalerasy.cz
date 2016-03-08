@@ -404,6 +404,9 @@ a.fa-social:hover, a.fa-social:focus{
     color: black;
     padding: 25px;
 }
+.box a:hover, .box a:focus, .box a:active{
+    color: inherit;
+}
 @media(min-width: 768px){
     .box.center{
         border-left: 1px solid #111; border-right: 1px solid #111;
@@ -432,12 +435,6 @@ a.fa-social:hover, a.fa-social:focus{
 .box .caption b{
     font-family: "BMWBold";
     font-weight: 500;
-}
-.box a{
-    text-align: center;
-    font-family: "BMWLight";
-    color: #d4af7a;
-    font-size: 18px;
 }
 #services .caption{
     font-family: 'BMWRegular';
@@ -766,14 +763,7 @@ img[class*="wp-image-"]{
     margin-top:30px;
 }
 .addToInline {
-    clear:both;
-    display: block;
-    float: right;
-    margin: auto 10px;
     font-size: 15px;
-}
-.addToInline div {
-
 }
 .availability {
     margin-top: 40px;
@@ -1053,9 +1043,25 @@ img[class*="wp-image-"]{
 ul.messages{
     list-style-type: none;
     padding: 15px;
+    margin-bottom: 15px;
+}
+.messages .success-msg{
     border: 1px solid rgb(211, 174, 121);
     background: rgba(211, 174, 121, 0.7) none repeat scroll 0% 0%;
-    margin-bottom: 15px;
+}
+.text-success{
+    color: #d4af7a;
+}
+.label-success{
+    font-size: 12px;
+    background-color: #d4af7a;
+}
+.price{
+    position: relative;
+}
+.special-price .label-success{
+    position: absolute;
+    right: -45px;
 }
 .messages ul{
     list-style-type: none;
