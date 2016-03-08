@@ -58,7 +58,7 @@
                     Přijďte na <b>školení</b> od zkušených řasových stylistů
                 </div>
 
-                <a href="http://creacore.cz/lashes/institut/kurzy/">více zde</a>
+                <a href="http://creacore.cz/lashes/institut/kurzy/" class="about">více zde</a>
             </div>
             <div class="box center col-sm-4">
                 <img src="<?php echo $this->getSkinUrl('img/stredni.jpg')?>" alt="">
@@ -68,7 +68,7 @@
                     <span style="position: relative; top: 25px; left: 5px">v</span>
                     <b style="font-size: 48px; position: relative; top: 23px; left: 5px">shopu</b>
                 </div>
-                <a href="http://creacore.cz/lashes/eshop">více zde</a>
+                <a href="http://creacore.cz/lashes/eshop" class="about">více zde</a>
             </div>
             <div class="box col-sm-4">
                 <img src="<?php echo $this->getSkinUrl('img/prava.jpg')?>" alt="">
@@ -78,7 +78,7 @@
                     <b style="margin-left: 17px; font-size: 2em;">salon</b>
                     <span>a vyzkoušejte naši kvalitu</span>
                 </div>
-                <a href="http://ekaterinakimlova.cz/">více zde</a>
+                <a href="http://ekaterinakimlova.cz/" class="about">více zde</a>
             </div>
         </div>
     </div>
@@ -120,7 +120,7 @@
                         <div class="price-box">
                             <span><?php echo Mage::app()->getStore()->getCurrentCurrency()->format($product->getFinalPrice());?></span>
                         </div>
-                        <a href="<?php echo $product->getProductUrl()?>">více zde</a>
+                        <a href="<?php echo $product->getProductUrl()?>" class="about">více zde</a>
                     </div>
                 </div>
             <?php endforeach;?>
