@@ -1080,6 +1080,10 @@ ul.messages{
 }
 td .product-name{
     margin-top: 5px;
+    font-size: 20px;
+}
+.product-name a:hover, .product-name a:focus, .product-name a:active{
+    text-decoration: none;
 }
 .availability {
     margin-top: 30px;
