@@ -39,43 +39,31 @@
 <div id="messages_product_view"><?php echo $this->getMessagesBlock()->toHtml() ?></div>
 <div class="product-view col-md-10 col-md-offset-1">
     <div class="product-essential">
-        <form action="<?php echo $this->getSubmitUrl($_product, array('_secure' => $this->_isSecure())) ?>"
-              method="post"
-              id="product_addtocart_form"<?php if ($_product->getOptions()): ?> enctype="multipart/form-data"<?php endif; ?>>
-            <?php echo $this->getBlockHtml('formkey') ?>
+        <form action="<?php echo $this->getSubmitUrl($_product) ?>" method="post" id="product_addtocart_form"<?php if($_product->getOptions()): ?> enctype="multipart/form-data"<?php endif; ?>>
             <div class="no-display">
-                <input type="hidden" name="product" value="<?php echo $_product->getId() ?>"/>
-                <input type="hidden" name="related_product" id="related-products-field" value=""/>
+                <input type="hidden" name="product" value="<?php echo $_product->getId() ?>" />
+                <input type="hidden" name="related_product" id="related-products-field" value="" />
             </div>
 
             <div class="product-shop">
-
                 <div class="row">
                     <div class="col-md-4">
                         <?php echo $this->getChildHtml('media') ?>
                     </div>
                     <div class="col-md-8">
-
                         <h1 style="font-family:'BMWRegular';font-size:30px;text-transform: uppercase;"><?php echo $_helper->productAttribute($_product, $_product->getName(), 'name') ?></h1>
-                        <?php if ($_product->getShortDescription()): ?>
-                            <!--<div class="short-description">
-                                <div
-                                    class="std"><?php echo $_helper->productAttribute($_product, nl2br($_product->getShortDescription()), 'short_description') ?></div>
-                            </div>-->
-                        <?php endif; ?>
-                        <?php //echo $this->getReviewsSummaryHtml($_product, false, true) ?>
                         <?php echo $this->getChildHtml('alert_urls') ?>
+                        <div class="add-to-box col-md-11 col-md-offset-1">
                         <?php echo $this->getChildHtml('product_type_data') ?>
                         <?php echo $this->getTierPriceHtml() ?>
                         <?php if (!$this->hasOptions()): ?>
-                            <div class="add-to-box col-md-11 col-md-offset-1">
+
                                 <?php if ($_product->isSaleable()): ?>
                                     <?php echo $this->getChildHtml('addtocart') ?>
-                                    <?php if ($this->helper('wishlist')->isAllow() || $_compareUrl = $this->helper('catalog/product_compare')->getAddUrl($_product)): ?>
-                                    <?php endif; ?>
                                 <?php endif; ?>
+
                                 <?php echo $this->getChildHtml('addto') ?>
-                            </div>
+
                             <?php echo $this->getChildHtml('extra_buttons') ?>
                         <?php elseif (!$_product->isSaleable()): ?>
                             <div class="add-to-box">
@@ -89,12 +77,16 @@
                             <?php echo $this->getChildChildHtml('container1', '', true, true) ?>
                         <?php endif; ?>
 
+                        <?php if ($_product->isSaleable() && $this->hasOptions()):?>
+                            <?php echo $this->getChildChildHtml('container2', '', true, true) ?>
+                        <?php endif;?>
+                        </div>
                     </div>
         </form>
         <script type="text/javascript">
             //<![CDATA[
             var productAddToCartForm = new VarienForm('product_addtocart_form');
-            productAddToCartForm.submit = function (button, url) {
+            productAddToCartForm.submit = function(button, url) {
                 if (this.validator.validate()) {
                     var form = this.form;
                     var oldUrl = form.action;
@@ -118,8 +110,8 @@
                 }
             }.bind(productAddToCartForm);
 
-            productAddToCartForm.submitLight = function (button, url) {
-                if (this.validator) {
+            productAddToCartForm.submitLight = function(button, url){
+                if(this.validator) {
                     var nv = Validation.methods;
                     delete Validation.methods['required-entry'];
                     delete Validation.methods['validate-one-required'];
@@ -146,13 +138,12 @@
 </div>
 </div>
 <div class="product-collateral clearBoth">
+    <div class="box-collateral <?php echo "box-{$alias}" ?>">
+        <h2 class="produktDetailH col-md-12">Detaily produktu</h2>
     <?php foreach ($this->getChildGroup('detailed_info', 'getChildHtml') as $alias => $html): ?>
-        <div class="box-collateral <?php echo "box-{$alias}" ?>">
-            <h2 class="produktDetailH col-md-12">Detaily produktu</h2>
             <?php echo $html; ?>
-        </div>
-        <?php echo $this->getChildHtml('related') ?>
     <?php endforeach; ?>
-    <?php echo $this->getChildHtml('upsell_products') ?>
+        <?php echo $this->getChildHtml('related') ?>
+        </div>
 </div>
 </div>

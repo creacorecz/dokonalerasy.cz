@@ -35,7 +35,12 @@ a:active, a:focus, a:hover{
     color: #d3ae79;
     outline: none;
 }
-
+select{
+    color: rgb(85, 85, 85);
+    background-color: rgb(255, 255, 255);
+    background-image: none;
+    border: 1px solid rgb(204, 204, 204);
+}
 #content{
     padding: 60px 0px;
 }
@@ -1068,11 +1073,14 @@ ul.messages{
 }
 .messages ul{
     list-style-type: none;
-    padding-left: 0px;
+    padding: 10px;
 }
 .table-bordered > thead > tr > th, .table-bordered > tbody > tr > th, .table-bordered > tfoot > tr > th, .table-bordered > thead > tr > td, .table-bordered > tbody > tr > td, .table-bordered > tfoot > tr > td {
     vertical-align: middle;
 }
 td .product-name{
     margin-top: 5px;
+}
+.availability {
+    margin-top: 30px;
 }
